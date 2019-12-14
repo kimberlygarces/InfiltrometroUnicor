@@ -136,7 +136,7 @@
       <tr>
         <th>N°</th>
         <th>Tiempo</th>
-        <th>Distancia</th>
+        <th>Distancia </th>
       </tr>
     </thead>
     <tbody id="tbody">

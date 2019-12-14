@@ -18,7 +18,7 @@ function tabla(){
                 '</td><td>'+js[i].distancia+'</td></tr>';
     }
     $('#tbody').html(tabla);
-
+    
     }
 });
 }
