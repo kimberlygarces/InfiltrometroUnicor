@@ -25,45 +25,57 @@
   
 <div class="container text-center">
   <img class="animated bounceInLeft delay-20s" src="img/user.png">
-            <form class="form-signin">
-                <label for="inputEmail" class="sr-only">Dispositivo</label>
-                <input type="text" id="inputEmail" class="form-control" placeholder="Codigo del dispositivo" required autofocus>
+
+            <form action="controller/registroUsuario.php" method="post" class="form-group">
+
+            <div class="row">
+            <div class="col-sm-6">
+                  <br>
+                <input type="text" name="Id_Usuario" class="form-control" placeholder="Identificación" required autofocus>
                 <br>    
-                <label for="inputEmail" class="sr-only">Usuario</label>
-                <input type="text" id="inputEmail" class="form-control" placeholder="Identificación" required autofocus>
+                <input type="text" name="Nombre_Usuario" class="form-control" placeholder="Nombre de Usuario" required autofocus>
                 <br>   
-                <label for="inputEmail" class="sr-only">Usuario</label>
-                <input type="username" id="inputEmail" class="form-control" placeholder="Nombre de usuario" required autofocus>
-                <br>             
-                <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                <input type="username" name="correo" class="form-control" placeholder="Correo" required autofocus>
                 <br>
-                <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Verifique Contraseña" required>
+            
+            </div>
+            <div class="col-sm-6">
+            <br>
+             
+                <input type="password" name="contraseña" class="form-control" placeholder="Contraseña" required>
                 <br>
+                <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
+                <br>
+                <input type="text" name="Id_Dispocitivo" class="form-control" placeholder="Codigo dispositivo" required autofocus>
+                <br>
+            </div>
+          </div>
+                             
+                
                 <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
                   
             </form>
 </div>
-<!-- Footer -->
+
+
 <footer class="page-footer font-small unique-color-dark pt-4">
 
-  <div class="container">
+<div class="container">
 
-    <ul class="list-unstyled list-inline text-center py-2">
-      <li class="list-inline-item">
-        <h5 class="mb-1">Ya se encuatra registrado</h5>
-      </li>
-      <li class="list-inline-item">
-        <button onclick="location='index.php'" type="button" class="btn btn-outline-dark">Iniciar secion</button>
-      </li>
-    </ul>
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Ya se encuatra registrado</h5>
+    </li>
+    <li class="list-inline-item">
+      <button onclick="location='index.php'" type="button" class="btn btn-outline-dark">Iniciar secion</button>
+    </li>
+  </ul>
 
-  </div>
+</div>
 
-  <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-    <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
-  </div>
+<div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
+  <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+</div>
 
 </footer>
 <!-- Footer -->
