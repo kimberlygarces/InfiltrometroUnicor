@@ -19,13 +19,11 @@ require_once "prueba.php";
                 while($reg = mysqli_fetch_array($res)){
                     $p = new datosprueba();
                     $p->N_Dato = $reg[0];
-                    $p->Id_Prueba = $reg[1];
-                    $p->tiempo = $reg[2];
-                    $p->distancia = $reg[3];
-                 //   $p->Clase = $reg[3];
-                   // $p->Precio = $reg[5];
-                    //$p->Cantidad = $reg[6];
-                    //$p->Oferta = $reg[7];
+                    $p->Id_dispocitivo = $reg[1];
+                    $p->Id_Prueba = $reg[2];
+                    $p->tiempo = $reg[3];
+                    $p->distancia = $reg[4];
+              
                     array_push($prueba, $p);
                 }
                 return $prueba;

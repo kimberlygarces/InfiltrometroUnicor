@@ -13,19 +13,20 @@
 	
 		//3.ejecutar la consulta
 		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
-		header("Location: ../index.php");
+		header("Location: ../inicio.php");
 		}
 
-		//Ejemplo curso PHP aprenderaprogramar.com
 
 
 				mysqli_select_db($conexion, "infiltrometro");
 
+				mysqli_query($conexion, "SET FOREIGN_KEY_CHECKS = 0");
 				mysqli_query($conexion, "TRUNCATE TABLE datosprueba");
+				mysqli_query($conexion, "SET FOREIGN_KEY_CHECKS = 1");
+
 
 				mysqli_close($conexion);
 
-				// Cerramos la conexion con la base de datos
 
 				echo 'Se ha ejecutado la consulta TRUNCATE';
 ?>
