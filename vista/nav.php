@@ -27,13 +27,13 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="Prueba_en_curso.php">Prueba en curso</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="historial.php">historial</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">Salir</a>
+        <a class="nav-link" href="index.php">Salir</a>
       </li>
        </ul>
   </div>

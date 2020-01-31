@@ -26,35 +26,35 @@
 <div class="container text-center">
   <img class="animated bounceInLeft delay-20s" src="img/user.png">
 
-            <form action="controller/registroUsuario.php" method="post" class="form-group">
+  <form action="registroUser.php" method="post" class="form-group">
 
-            <div class="row">
-            <div class="col-sm-6">
-                  <br>
-                <input type="text" name="Id_Usuario" class="form-control" placeholder="Identificación" required autofocus>
-                <br>    
-                <input type="text" name="Nombre_Usuario" class="form-control" placeholder="Nombre de Usuario" required autofocus>
-                <br>   
-                <input type="username" name="correo" class="form-control" placeholder="Correo" required autofocus>
-                <br>
-            
-            </div>
-            <div class="col-sm-6">
-            <br>
-             
-                <input type="password" name="contraseña" class="form-control" placeholder="Contraseña" required>
-                <br>
-                <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
-                <br>
-                <input type="text" name="Id_Dispocitivo" class="form-control" placeholder="Codigo dispositivo" required autofocus>
-                <br>
-            </div>
-          </div>
-                             
-                
-                <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
-                  
-            </form>
+<div class="row">
+<div class="col-sm-6">
+      <br>
+    <input type="text" name="Id_Usuario" class="form-control" placeholder="Identificación" required autofocus>
+    <br>    
+    <input type="text" name="Nombre_Usuario" class="form-control" placeholder="Nombre de Usuario" required autofocus>
+    <br>   
+    <input type="username" name="Correo" class="form-control" placeholder="Correo" required autofocus>
+    <br>
+
+</div>
+<div class="col-sm-6">
+<br>
+ 
+    <input type="password" name="Contraseña" class="form-control" placeholder="Contraseña" required>
+    <br>
+    <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
+    <br>
+    <input type="text" name="Id_Dispocitivo" class="form-control" placeholder="Codigo dispositivo" required autofocus>
+    <br>
+</div>
+</div>
+                 
+    
+    <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
+      
+</form>
 </div>
 
 

@@ -105,7 +105,7 @@
   </div>
   <div class="col-sm-3">
 
-  <h1>que onda</h1>
+  <h1>En este espacio se mostraran imagenes relacionadas</h1>
 
   </div>
     </div>
@@ -118,7 +118,7 @@
 
   $(document).ready(function(){
     //Cada 10 segundos (10000 milisegundos) se ejecutará la función refrescar
-    setTimeout(refrescar, 60000);
+    setTimeout(refrescar, 30000);
   });
   function refrescar(){
     //Actualiza la página
