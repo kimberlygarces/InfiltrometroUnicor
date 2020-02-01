@@ -1,6 +1,6 @@
   
 <?php
-  require 'controller/conexion.php';
+  require 'conexion.php';
   $message = '';
 
   if (!empty($_POST['Id_Usuario']) && !empty($_POST['Nombre_Usuario']) && !empty($_POST['Correo']) && !empty($_POST['Contraseña'])&& !empty($_POST['Id_Dispocitivo'])) {
@@ -19,14 +19,14 @@
     $stmt->bindParam(':Id_Dispocitivo', $_POST['Id_Dispocitivo']);
        
     if ($stmt->execute()) {
-      $message = 'Usuario Creado';
+      header("Location: ../inicio.php");
     } else {
       $message = 'Error al crear usuario';
     }
   }
+
 ?>
 
-<?php require 'vista/registro.php' ?>
 
 
     <?php if(!empty($message)): ?>

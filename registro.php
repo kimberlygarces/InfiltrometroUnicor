@@ -26,7 +26,7 @@
 <div class="container text-center">
   <img class="animated bounceInLeft delay-20s" src="img/user.png">
 
-  <form action="registroUser.php" method="post" class="form-group">
+  <form action="controller/registroUser.php" method="post" class="form-group">
 
 <div class="row">
 <div class="col-sm-6">
