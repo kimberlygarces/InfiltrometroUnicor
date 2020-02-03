@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-02-2020 a las 22:40:23
+-- Tiempo de generación: 03-02-2020 a las 22:53:17
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -43,7 +43,7 @@ CREATE TABLE `datosprueba` (
 --
 
 CREATE TABLE `dispositivo` (
-  `Id_Dispositivo` varchar(11) NOT NULL,
+  `Id_Dispositivo` varchar(14) NOT NULL,
   `Versión` varchar(25) NOT NULL,
   `Descripcion` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -82,7 +82,7 @@ CREATE TABLE `localizacion` (
 --
 
 CREATE TABLE `suelo` (
-  `Id_Prueba` varchar(11) NOT NULL,
+  `Id_Prueba` varchar(23) NOT NULL,
   `TipoSuelo` varchar(50) NOT NULL,
   `Observaciones` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -94,11 +94,11 @@ CREATE TABLE `suelo` (
 --
 
 CREATE TABLE `usuario` (
-  `Id_Usuario` int(11) NOT NULL,
-  `Nombre_Usuario` varchar(11) NOT NULL,
-  `Correo` varchar(25) NOT NULL,
-  `Contraseña` varchar(11) NOT NULL,
-  `Id_Dispositivo` varchar(11) NOT NULL
+  `Id_Usuario` int(23) NOT NULL,
+  `Nombre_Usuario` varchar(50) NOT NULL,
+  `Correo` varchar(50) NOT NULL,
+  `Contraseña` varchar(64) NOT NULL,
+  `Id_Dispositivo` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
