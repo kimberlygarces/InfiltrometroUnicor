@@ -17,7 +17,7 @@
       
      header("Location: http://localhost/proyectos/php/infiltrometro/tabla.php"); 
     } else {
-      $message = 'No registrado';
+      $message = 'Noregistrado';
     }
   }
 ?>
