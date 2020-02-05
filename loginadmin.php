@@ -1,3 +1,11 @@
+<?php
+session_start();
+error_reporting(0);
+if (isset($_SESSION['admin'])) {
+    header('location:admin.php');       
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,47 +27,24 @@
 
 <div class="jumbotron text-center">
   <h1>Uninfiltrometro</h1>
+  <h2>Login Administrador</h2>
 </div>
   
 <div class="container text-center">
   <img class="animated infinite tada" src="img/user.png">
 
-<<<<<<< HEAD
-            <form class="form-signin" action="controller/login.php" method="POST">
-=======
-            <form class="form-signin" action="loginusuarioverificar.php" method="POST">
->>>>>>> 60c6bbae6d6d72f0af1375b58a84c5cd21a676e5
+            <form class="form-signin" action="loginadminverificar.php" method="POST">
                 <label for="inputEmail" class="sr-only">Usuario</label>
-                <input type="email" id="correo" name="correo" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="name" id="id" class="form-control" placeholder="ID usuario" name="id" required autofocus>
                 <br>                    
                 <label for="inputPassword" class="sr-only">Contraseña</label>
-<<<<<<< HEAD
-                <input type="password" id="pass" class="form-control" placeholder="Contraseña" required>
-=======
-                <input type="password" id="password" name="pass" class="form-control" placeholder="Contraseña" required>
->>>>>>> 60c6bbae6d6d72f0af1375b58a84c5cd21a676e5
+                <input type="password" id="pass" name="pass" class="form-control" placeholder="Contraseña" required>
                 <br>
-                <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar seción</button>
-                  
+                <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar sesión</button>                  
             </form>
 </div>
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark pt-4">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Call to action -->
-    <ul class="list-unstyled list-inline text-center py-2">
-      <li class="list-inline-item">
-        <h5 class="mb-1">Nuevo Usuario</h5>
-      </li>
-      <li class="list-inline-item">
-        <button  onclick="location='registro.php'" type="button" class="btn btn-outline-dark">Registrar</button>
-      </li>
-    </ul>
-
-  </div>
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
