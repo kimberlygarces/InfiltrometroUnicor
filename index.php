@@ -24,20 +24,12 @@
 <div class="container text-center">
   <img class="animated infinite tada" src="img/user.png">
 
-<<<<<<< HEAD
-            <form class="form-signin" action="controller/login.php" method="POST">
-=======
             <form class="form-signin" action="loginusuarioverificar.php" method="POST">
->>>>>>> 60c6bbae6d6d72f0af1375b58a84c5cd21a676e5
                 <label for="inputEmail" class="sr-only">Usuario</label>
                 <input type="email" id="correo" name="correo" class="form-control" placeholder="Usuario" required autofocus>
                 <br>                    
                 <label for="inputPassword" class="sr-only">Contraseña</label>
-<<<<<<< HEAD
-                <input type="password" id="pass" class="form-control" placeholder="Contraseña" required>
-=======
                 <input type="password" id="password" name="pass" class="form-control" placeholder="Contraseña" required>
->>>>>>> 60c6bbae6d6d72f0af1375b58a84c5cd21a676e5
                 <br>
                 <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar seción</button>
                   
