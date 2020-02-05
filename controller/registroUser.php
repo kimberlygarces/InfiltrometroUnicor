@@ -11,10 +11,10 @@
 
     $stmt->bindParam(':Nombre_Usuario', $_POST['Nombre_Usuario']);
 
-    $stmt->bindParam(':Correo', $_POST['Correo']);
+    $stmt->bindParam(':correo', $_POST['Correo']);
 
-    $contraseña = password_hash($_POST['Contraseña'], PASSWORD_BCRYPT);
-    $stmt->bindParam(':Contraseña', $contraseña);
+    $contraseña = md5($_POST['Contraseña']);
+    $stmt->bindParam(':contrasena', $contraseña);
 
     $stmt->bindParam(':Id_Dispocitivo', $_POST['Id_Dispocitivo']);
        
@@ -30,8 +30,3 @@
     <?php if(!empty($message)): ?>
       <p> <?= $message ?></p>
     <?php endif; ?>
-
-
-    
-</body>
-</html>
