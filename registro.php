@@ -42,7 +42,7 @@
           </div>
             <div class="col-sm-6">
           <br>
-          <input type="password" name="Contraseña" class="form-control" placeholder="Contraseña" required>
+          <input type="password" name="Contrasena" class="form-control" placeholder="Contraseña" required>
           <br>
           <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
           <br>
