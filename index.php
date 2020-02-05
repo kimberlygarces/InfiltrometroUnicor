@@ -16,14 +16,6 @@
   <link href="css/Inicio.css" rel="stylesheet">
 </head>
 <body>
-<?php require 'controller/login.php' ?>
-
-    <?php if(!empty($message)): ?>
-      
-
-      <script language="javascript">alert('Usuario no existe' );</script>
-
-    <?php endif; ?>
 
 <div class="jumbotron text-center">
   <h1>Uninfiltrometro</h1>
@@ -32,12 +24,12 @@
 <div class="container text-center">
   <img class="animated infinite tada" src="img/user.png">
 
-            <form class="form-signin" action="login.php" method="POST">
+            <form class="form-signin" action="controller/login.php" method="POST">
                 <label for="inputEmail" class="sr-only">Usuario</label>
                 <input type="email" id="Correo" class="form-control" placeholder="Usuario" required autofocus>
                 <br>                    
                 <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="Contraseña" class="form-control" placeholder="Contraseña" required>
+                <input type="password" id="pass" class="form-control" placeholder="Contraseña" required>
                 <br>
                 <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar seción</button>
                   
@@ -55,7 +47,7 @@
         <h5 class="mb-1">Nuevo Usuario</h5>
       </li>
       <li class="list-inline-item">
-        <button  onclick="location='registroUser.php'" type="button" class="btn btn-outline-dark">Registrar</button>
+        <button  onclick="location='registro.php'" type="button" class="btn btn-outline-dark">Registrar</button>
       </li>
     </ul>
 

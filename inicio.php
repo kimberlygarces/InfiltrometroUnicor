@@ -35,8 +35,6 @@
 </nav>
 <div class="jumbotron text-center">
 <img class="animated infinite fadeIn" src="img/user.png">
-
-   
 </div>
 
 <div class="container">

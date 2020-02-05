@@ -18,21 +18,18 @@
 
   <!-- API scanner QR -->
   <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-
-
+<!-- Link iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
 <body>
-
   <div class="jumbotron text-center">
     <h1>Infiltrometro</h1>
-  </div>
+    </div>
 
   <div class="container text-center">
     <img class="animated bounceInLeft delay-20s" src="img/user.png">
 
     <form action="controller/registroUser.php" method="post" class="form-group">
-
       <div class="row">
         <div class="col-sm-6">
           <br>
@@ -42,36 +39,71 @@
           <br>
           <input type="username" name="Correo" class="form-control" placeholder="Correo" required autofocus>
           <br>
-
-        </div>
-        <div class="col-sm-6">
+          </div>
+            <div class="col-sm-6">
           <br>
-
           <input type="password" name="Contraseña" class="form-control" placeholder="Contraseña" required>
           <br>
           <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
           <br>
-          <input type="text" name="Id_Dispocitivo" id="id_dispositivo" class="form-control" placeholder="Código dispositivo" required autofocus>
-          <br>
-          <input type="button" id="activarCamQr" name="activarQr" class="form-control" value="Ingresar QR" onclick="activarCamara()">
+            <div class="form-group row">
+            <div class="col-sm-9">
+            <input type="text" name="Id_Dispocitivo" id="id_dispositivo" class="form-control" placeholder="Código dispositivo" required autofocus>
+                </div>
+                <br>
+              <div class="col-sm-2">
+                
+            
+          <div class="container">
+            <!-- Button to Open the Modal -->
+          
+            <button style="" id="activarCamQr" name="activarQr" class="btn btn-default animated infinite tada delay-2s" class="" value="Ingresar QR" onclick="activarCamara()"title="Scanear QR" data-toggle="modal" data-target="#myModal">
+              <i class="material-icons" style="font-size:39px">crop_free</i>
+            </button>   
+                  
 
-
-          <br>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Scaner QR</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+    <div class="panelCamara" id="panelCamaraId">
+          <video id="preview"></video>
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
       </div>
-
-
-      <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
-
-    </form>
+    </div>
   </div>
-  <!-- <div class="panelCamara" id="panelCamaraId"> -->
-    <video id="preview"></video>
-  <!-- </div> -->
-  <script>
-    function activarCamara() {
-      // document.getElementById('panelCamaraId').append;
-      // }
+  
+</div>
+
+         
+          </div>
+      </div>
+      </div>
+      <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
+    </form>
+        </div>
+      <script>
+          function activarCamara() {
+            
+            // document.getElementById('panelCamaraId').append;
+            // }
 
       let scanner = new Instascan.Scanner({
         video: document.getElementById('preview')
