@@ -33,7 +33,7 @@
         <a class="nav-link" href="historial.php">historial</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Salir</a>
+        <a class="nav-link" href="controller/cerrarSesion.php?url=index.php">Salir</a>
       </li>
        </ul>
   </div>
