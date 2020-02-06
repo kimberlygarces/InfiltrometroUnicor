@@ -1,7 +1,5 @@
 <?php require 'vista/nav.php' ?>
 
-
-
 <div class="container">
   <div id="Mostrar" class="row align-items-start">
     <div class="col-sm-12 col-lg-6">
@@ -21,7 +19,7 @@
             $conexion = mysqli_connect("localhost", "root", "") or die("ERROR: " . mysqli_error());
             mysqli_select_db($conexion, "infiltrometro") or die("Error conectandose a la BD ");
             //2.prepara una consulta sql
-            $sql = "SELECT * FROM historialdatos WHERE Id_Prueba = " . $_GET["Id"];
+            $sql = "SELECT * FROM historialdatos WHERE Id_Prueba = '" . $_GET["Id"]."'";
             //3.ejecutar la consulta
 
             $resultado = mysqli_query($conexion, $sql) or die("ERROR: " . mysqli_error($conexion));

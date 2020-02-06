@@ -6,7 +6,6 @@ class datosprueba{
     public $Id_Prueba;
     public $tiempo;
     public $distacia;
-   
-    
+
 }
 ?>
