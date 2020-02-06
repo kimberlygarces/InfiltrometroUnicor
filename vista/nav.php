@@ -10,6 +10,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <script type="text/javascript" src="js/datos.js"></script>
+  <link href="css/Inicio.css" rel="stylesheet">
+
 </head>
 <body>
 

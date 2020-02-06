@@ -1,4 +1,5 @@
 <?php require 'vista/nav.php' ?>
+<?php require 'controller/conexion2.php' ?>
 
 <div class="container">
   <div id="Mostrar" class="row align-items-start">
@@ -16,27 +17,29 @@
           <?php
           if (!empty($_GET["Id"])) {
             //1.contectarse al servidor mysql
-            $conexion = mysqli_connect("localhost", "root", "") or die("ERROR: " . mysqli_error());
-            mysqli_select_db($conexion, "infiltrometro") or die("Error conectandose a la BD ");
+            // $conexion = mysqli_connect("localhost", "root", "") or die("ERROR: " . mysqli_error());
+            // mysqli_select_db($conexion, "infiltrometro") or die("Error conectandose a la BD ");
             //2.prepara una consulta sql
             $sql = "SELECT * FROM historialdatos WHERE Id_Prueba = '" . $_GET["Id"]."'";
             //3.ejecutar la consulta
-
-            $resultado = mysqli_query($conexion, $sql) or die("ERROR: " . mysqli_error($conexion));
-            if (empty($resultado)) {
+            $resultado = $conn->query($sql);
+            // $resultado = $resultado->fetch_();
+            // $resultado = mysqli_query($conexion, $sql) or die("ERROR: " . mysqli_error($conexion));
+            // if (empty($resultado)) {
               echo '<tr><td colspan="4"></td></tr>';
-            } else {
-              $i = 0;
-              while ($registro = mysqli_fetch_array($resultado)) {
+            // } else {
+            //   $i = 0;
+              while ($registro = $resultado->fetch_assoc()) {
                 echo '<tr>';
                 echo '<td>' . $registro["Id_Prueba"] . '</td>';
                 echo '<td>' . $registro["N_Dato"] . '</td>';
                 echo '<td>' . $registro["tiempo"] . '</td>';
                 echo '<td>' . $registro["distancia"] . '</td>';
                 echo '</tr>';
-              }
+              // }
             }
           }
+          $conn->close();
           ?>
         </tbody>
       </table>

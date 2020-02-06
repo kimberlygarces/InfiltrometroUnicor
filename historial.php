@@ -34,7 +34,7 @@
            echo '<tr>';
              echo '<td>';
              
-            echo"<button onclick=location='prueba.php?Id=$registro[Id_Prueba]' class='btn btn-primary'>".$registro["Id_Prueba"]."</button>";
+            echo"<button onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' class='btn btn-primary'>".$registro["Id_Prueba"]."</button>";
  
              echo '</td>';
              echo '<td>';
@@ -46,6 +46,7 @@
                
          }
        }
+       mysqli_close($conexion);
        ?>
            
       
