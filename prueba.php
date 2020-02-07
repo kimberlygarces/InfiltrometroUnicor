@@ -3,9 +3,9 @@
 if(!isset($_GET['Id'])){
   header('location:historial.php');
 }
-require 'vista/nav.php' ?>
-
-
+require 'vista/nav.php';
+require 'controller/conexion2.php';
+?>
 
 <div class="container">
   <div id="Mostrar" class="row align-items-start">
@@ -25,8 +25,7 @@ require 'vista/nav.php' ?>
         <tbody id="myTable">
           <?php
           if (!empty($_GET["Id"])) {
-            //1.contectarse al servidor mysql            
-            require 'controller/conexion2.php';
+            //1.contectarse al servidor mysql 
             if ($conn->connect_error) {
               die("Connection failed: " . $conn->connect_error);
             }

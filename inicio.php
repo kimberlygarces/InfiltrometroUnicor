@@ -49,7 +49,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button  onclick="location='Prueba_en_curso.php'" type="button"> <img class="animated infinite tada delay-2s" src="img/prueba.png" alt="x" /></button>
+  <button  onclick="location='Prueba_en_curso.php'" type="button"> <img class="btn btn-default animated infinite tada delay-2s" src="img/prueba.png" alt="x" /></button>
   </li>
   <li class="list-inline-item">
   <h5 class="mb-1">Prueba en curso</h5>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button onclick="location='historial.php'" type="submit"><img class="animated infinite tada delay-2s" src="img/historial.png" alt="x" /></button>
+  <button onclick="location='historial.php'" type="submit"><img class="btn btn-default animated infinite tada delay-2s" src="img/historial.png" alt="x" /></button>
   </li>
   <li class="list-inline-item">
   <h5 class="mb-1">Historial</h5>

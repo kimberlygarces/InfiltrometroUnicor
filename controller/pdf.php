@@ -124,8 +124,15 @@ $result = $conn->query('SELECT * FROM (dispositivo, localizacion, suelo, usuario
                 $result = $conn->query('SELECT * FROM historialDatos WHERE Id_Prueba = "' . $nombrePrueba . '"');
                 $aux = null;
                 $ia = 0;
+                $intercaladoCelda = FALSE;
                 while ($row = $result->fetch_assoc()) {
-                    echo '<tr>';
+                    if($intercaladoCelda){
+                        echo '<tr style="background-color: rgb(246,242,253)">';
+                        $intercaladoCelda=FALSE;
+                    }else{
+                        echo '<tr>';
+                        $intercaladoCelda=TRUE;
+                    }
                     echo '<td>' . $row['N_Dato'] . '</td>';
                     echo '<td>' . $row['tiempo'] . '</td>';
                     echo '<td>' . $row['distancia'] . '</td>';
