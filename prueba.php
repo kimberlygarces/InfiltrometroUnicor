@@ -1,6 +1,5 @@
-
-<?php 
-if(!isset($_GET['Id'])){
+<?php
+if (!isset($_GET['Id'])) {
   header('location:historial.php');
 }
 require 'vista/nav.php';
@@ -12,14 +11,16 @@ require 'controller/conexion2.php';
     <div class="col-sm-12 col-lg-6">
       <h1>Datos prueba</h1>
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank"><button type="button" class="btn btn-outline-dark">
-        Descargar .PDF
-      </button></a>
+          Descargar .PDF
+        </button></a>
       <table class="table table-striped">
         <thead>
-          <th>PRUEBA</th>
+          <!-- <th>PRUEBA</th> -->
           <th>N_DATO</th>
           <th> TIEMPO </th>
           <th> DISTANCIA </th>
+          <th> I PARCIAL (mm) </th>
+          <th> iA (mm) </th>
         </thead>
 
         <tbody id="myTable">
@@ -33,13 +34,29 @@ require 'controller/conexion2.php';
             $sql = "SELECT * FROM historialdatos WHERE Id_Prueba = '" . $_GET["Id"] . "'";
             //3.ejecutar la consulta
             $resultado = $conn->query($sql);
-            echo '<tr><td colspan="4"></td></tr>';
+            echo '<tr><td colspan="5"></td></tr>';
+            $aux = null;
+            $ia = 0;
             while ($registro = $resultado->fetch_assoc()) {
               echo '<tr>';
-              echo '<td>' . $registro["Id_Prueba"] . '</td>';
+              // echo '<td>' . $registro["Id_Prueba"] . '</td>';
               echo '<td>' . $registro["N_Dato"] . '</td>';
               echo '<td>' . $registro["tiempo"] . '</td>';
               echo '<td>' . $registro["distancia"] . '</td>';
+
+              if ($aux == null) {
+                echo '<td>-</td>';
+              } else {
+                echo '<td>' . (($registro['distancia'] - $aux) * 10) . '</td>';
+              }
+              if ($aux == null) {
+                echo '<td>-</td>';
+              } else {
+                $ia = $ia + ($registro['distancia'] - $aux);
+                echo '<td>' . ($ia * 10) . '</td>';
+              }
+              $aux = $registro['distancia'];
+
               echo '</tr>';
             }
           }

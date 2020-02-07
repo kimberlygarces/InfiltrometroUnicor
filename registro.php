@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="css/Inicio.css">
 
   <!-- API scanner QR -->
+  <link rel="stylesheet" href="https://schmich.github.io/instascan/style.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
   <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
   <!-- Link iconos -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -58,7 +61,7 @@
               <div class="container">
                 <!-- Button to Open the Modal -->
 
-                <button style="" id="activarCamQr" name="activarQr" class="btn btn-default animated infinite tada delay-2s" class="" value="Ingresar QR" onclick="activarCamara()" title="Scanear QR" data-toggle="modal" data-target="#myModal">
+                <button id="activarCamQr" name="activarQr" class="btn btn-default animated infinite tada delay-2s" class="" value="Ingresar QR" onclick="activarCamara()" title="Scanear QR" data-toggle="modal" data-target="#myModal">
                   <i class="material-icons" style="font-size:39px">crop_free</i>
                 </button>
 
@@ -71,7 +74,7 @@
                       <!-- Modal Header -->
                       <div class="modal-header">
                         <h4 class="modal-title">Scaner QR</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" onclick="closeCamera()" data-dismiss="modal">&times;</button>
                       </div>
 
                       <!-- Modal body -->
@@ -101,36 +104,33 @@
     </form>
   </div>
   <script>
-    function closeCamera() {
       let scanner = new Instascan.Scanner({
         video: document.getElementById('preview')
       });
+
+    function closeCamera() {
       scanner.stop();
     }
 
     function activarCamara() {
-
-      // document.getElementById('panelCamaraId').append;
-      // }
-
-      let scanner = new Instascan.Scanner({
-        video: document.getElementById('preview')
-      });
       scanner.addListener('scan', function(content) {
         console.log(content);
         document.getElementById("id_dispositivo").value = content;
         scanner.stop();
+        $('#myModal').modal('hide');
       });
       Instascan.Camera.getCameras().then(function(cameras) {
         if (cameras.length > 0) {
           scanner.start(cameras[0]);
         } else {
           console.error('No cameras found.');
+          alert("camara no encontrada");
         }
       }).catch(function(e) {
         console.error(e);
       });
     }
+  
   </script>
 
 
