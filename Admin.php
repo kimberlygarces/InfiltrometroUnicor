@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>Registro Infiltrometro</title>
@@ -18,13 +18,10 @@ if (!isset($_SESSION['admin'])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
   <!--Animacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <link href="css/Inicio.css" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -61,22 +58,18 @@ if (!isset($_SESSION['admin'])) {
     </form>
   </div>
 
-
+<!-- footer -->
   <footer class="page-footer font-small unique-color-dark pt-4">
-
     <div class="container">
       <a href="controller/cerrarSesion.php?url=index.php">Cerrar sesión</a>
-
-
     </div>
 
     <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-      <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+      <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor </a>
     </div>
 
   </footer>
   <!-- Footer -->
-
 </body>
 
 </html>

@@ -1,9 +1,9 @@
 <?php
-$server = 'localhost';
-$username = 'root';
-$password = '';
+$server = 'localhost:3306';
+$username = 'gabriel';
+$password = 'clave';
 $database = 'infiltrometro';
 
-    $conn = new mysqli("localhost", "root", "", "infiltrometro");
+    $conn = new mysqli($server, $username, $password, $database);
 
 ?>
