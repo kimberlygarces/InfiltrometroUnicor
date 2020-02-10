@@ -12,7 +12,7 @@ require 'controller/conexion2.php';
       <h1>Datos prueba</h1>
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank"><button type="button" class="btn btn-outline-dark">
       <i class="fa fa-file-pdf-o fa-2x"> Descargar</i>
-        </button></a>
+      </button></a>
         <br><br>
       <table class="table table-striped">
         <thead>

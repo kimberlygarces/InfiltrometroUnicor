@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="js/datos.js"></script>
-  <link href="css/Inicio.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/inicio.css">
   
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -34,6 +34,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: #1CE32B;
   padding: 14px 16px;
   border-radius: 10px;
+  
 }
 
 .navbar-brand {
@@ -47,6 +48,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     float: none;
     display: block;
   }
+
+
 }
 
 </style>
