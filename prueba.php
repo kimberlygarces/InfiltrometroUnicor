@@ -8,11 +8,12 @@ require 'controller/conexion2.php';
 
 <div class="container">
   <div id="Mostrar" class="row align-items-start">
-    <div class="col-sm-12 col-lg-6">
+    <div class="col-sm-12 col-lg-8">
       <h1>Datos prueba</h1>
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank"><button type="button" class="btn btn-outline-dark">
-          Descargar .PDF
+      <i class="fa fa-file-pdf-o fa-2x"> Descargar</i>
         </button></a>
+        <br><br>
       <table class="table table-striped">
         <thead>
           <!-- <th>PRUEBA</th> -->

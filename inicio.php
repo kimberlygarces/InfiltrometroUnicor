@@ -24,21 +24,6 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 <body>
 <?php require 'vista/nav.php' ?>
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="">Salir</a>
-      </li>
-       </ul>
-  </div>
-</nav>
 <div class="jumbotron text-center">
 <img class="animated infinite fadeIn" src="img/user.png">
 </div>
