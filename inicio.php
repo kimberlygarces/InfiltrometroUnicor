@@ -4,40 +4,27 @@ if (!isset($_SESSION['usuario'])) {
     header("location:index.php");
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Inicio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-<!--Animacion-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-  <link href="css/Inicio.css" rel="stylesheet">
-
-
-</head>
-<body>
 <?php require 'vista/nav.php' ?>
-<div class="jumbotron text-center">
-<img class="animated infinite fadeIn" src="img/user.png">
-</div>
+<link rel="stylesheet" type="text/css" href="vista/css/pagina.css">
 
+<div class="jumbotron text-center">
+<img class="animated fadeIn" src="img/user.png">
+</div>
+<br>
 <div class="container">
 <div class="row justify-content-between">
 <!-- boton para acceder a la prueba en curso -->
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button  onclick="location='Prueba_en_curso.php'" type="button"> <img class="btn btn-default animated infinite tada delay-2s" src="img/prueba.png" alt="x" /></button>
+  <button  onclick="location='Prueba_en_curso.php'" class="btn btn-default animated tada duration-30s"> 
+  <img src="img/prueba.png" alt="x" />
+  <h5 class="mb-1">Prueba en curso</h5>
+
+  </button>
   </li>
   <li class="list-inline-item">
-  <h5 class="mb-1">Prueba en curso</h5>
   </li>
 </ul>
 </div>
@@ -45,10 +32,13 @@ if (!isset($_SESSION['usuario'])) {
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button onclick="location='historial.php'" type="submit"><img class="btn btn-default animated infinite tada delay-2s" src="img/historial.png" alt="x" /></button>
+  <button onclick="location='historial.php'" class="btn btn-default animated tada duration-30s">
+  <img src="img/historial.png" alt="x" />
+  <h5 class="mb-1">Historial</h5>
+
+  </button>
   </li>
   <li class="list-inline-item">
-  <h5 class="mb-1">Historial</h5>
   </li>
 </ul>
 </div>

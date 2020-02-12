@@ -14,7 +14,6 @@
   <!--Animacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-  <link rel="stylesheet" href="css/Inicio.css">
 
   <!-- API scanner QR -->
   <link rel="stylesheet" href="https://schmich.github.io/instascan/style.css">
@@ -23,15 +22,20 @@
   <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
   <!-- Link iconos -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
+
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1>Infiltrometro</h1>
-  </div>
+  <<div class="jumbotron text-center">
+  <img class="animated bounceInLeft delay-20s" src="img/user.png">
+<h1>Registro</h1>
+</div>
 
   <div class="container text-center">
-    <img class="animated bounceInLeft delay-20s" src="img/user.png">
+    <!-- <img class="animated bounceInLeft delay-20s" src="img/user.png"> -->
 
     <form action="controller/registroUser.php" method="post" class="form-group">
       <div class="row">
