@@ -10,10 +10,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="js/datos.js"></script>
-
-  <!-- animacion  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+  <link rel="stylesheet" type="text/css" href="css/inicio.css">
+  
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -62,7 +60,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="navbar">
   <!-- Brand -->
-  <a class="navbar-brand" href=inicio.php><i class="fa fa-home fa-fw fa-lg"></i><b>Inficor</b></a>
+  <a class="navbar-brand" href=Admin.php><i class="fa fa-home fa-fw fa-lg"></i><b>Inficor</b></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -71,17 +69,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
   <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ">
+    <!-- <ul class="navbar-nav ">
       <li class="nav-item">
         <a class="nav-link" href="Prueba_en_curso.php"><i class="fa fa-pencil fa-fw"></i>Prueba en curso</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="historial.php"><i class="fa fa-book fa-fw"></i> Historial </a>
       </li>
-      </ul>
+      </ul> -->
       <ul class="nav navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="controller/cerrarSesion.php?url=index.php"><i class="fa fa-fw fa-user"></i> Salir</a>
+        <a class="nav-link" href="controller/cerrarSesion.php?url=loginadmin.php"><i class="fa fa-fw fa-user"></i> Salir</a>
       </li>
        </ul>
        

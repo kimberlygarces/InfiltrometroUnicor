@@ -13,16 +13,17 @@
 <!--Animacion-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
  
-  <link href="css/Inicio.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Uninfiltrometro</h1>
+<img class="animated  fadeIn" src="img/user.png">
+<h1>Inficor</h1>
 </div>
   
 <div class="container text-center">
-  <img class="animated infinite tada" src="img/user.png">
+  <!-- <img class="animated infinite tada" src="img/user.png"> -->
 
             <form class="form-signin" action="loginusuarioverificar.php" method="POST">
                 <label for="inputEmail" class="sr-only">Usuario</label>

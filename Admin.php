@@ -21,14 +21,19 @@ if (!isset($_SESSION['admin'])) {
   <!--Animacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-  <link href="css/Inicio.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
 </head>
 
 <body>
 
-  <div class="jumbotron text-center">
-    <h1>Infiltrometro</h1>
+<?php require 'vista/navAdmin.php' ?>
+
+<div class="jumbotron text-center">
+  
+  <img class="animated tada" src="img/admin2.png">
+  <h1>Admin Inficor</h1>
   </div>
+
 
   <div class="container text-center">
 
@@ -48,6 +53,7 @@ if (!isset($_SESSION['admin'])) {
         </div>
         <div class="col-sm-6">
           <br>
+          <img class="animated tada" src="img/admin3.png">
 
           <br>
         </div>
@@ -60,10 +66,7 @@ if (!isset($_SESSION['admin'])) {
 
 <!-- footer -->
   <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="container">
-      <a href="controller/cerrarSesion.php?url=index.php">Cerrar sesión</a>
-    </div>
-
+    
     <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
       <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor </a>
     </div>

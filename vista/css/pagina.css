@@ -1,0 +1,41 @@
+body{
+    background-color: #F8F9F9 ;
+  }
+  
+  button:hover {
+    background-color: #1CE32B;
+    padding: 34px 36px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 2px #999;
+    
+  }
+  
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .animated:hover {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+
+  .jumbotron {
+  margin-bottom: 0px;
+  background-image: url(../../img/cultivo.jpeg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  
+}

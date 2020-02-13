@@ -21,18 +21,18 @@ if (isset($_SESSION['admin'])) {
 <!--Animacion-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
  
-  <link href="css/Inicio.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <h1>Uninfiltrometro</h1>
-  <h2>Login Administrador</h2>
+  
+<img class="animated tada" src="img/admin.png">
+<h1>Admin Inficor</h1>
 </div>
   
 <div class="container text-center">
-  <img class="animated infinite tada" src="img/user.png">
-
+  <!-- <img class="animated infinite tada" src="img/user.png"> -->
             <form class="form-signin" action="loginadminverificar.php" method="POST">
                 <label for="inputEmail" class="sr-only">Usuario</label>
                 <input type="name" id="id" class="form-control" placeholder="ID usuario" name="id" required autofocus>
