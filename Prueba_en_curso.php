@@ -5,14 +5,11 @@
 <div class="container">
 <br>
 <div class="container">
-
-
   <!-- <p>Datos cacturados</p>    -->
   <!-- Button to Open the Modal -->
   <!-- <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#myModal">
     Registrar Prueba
   </button> -->
- 
 
   <!-- The Modal -->
   <!-- <div class="modal fade" id="myModal">

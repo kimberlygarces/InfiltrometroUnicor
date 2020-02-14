@@ -3,7 +3,7 @@
 
           <div class="container">
           <br>
-          <h1 class='animated bounce delay-20s'>Historial de pruebas</h1>
+          <h1 class=''>Historial de pruebas</h1>
         
           <div id="Mostrar"class="row align-items-start">
             <div class="col-sm-6 col-lg-4">
