@@ -1,4 +1,7 @@
-<?php require 'vista/nav.php' ?>
+<?php require 'vista/nav.php';
+require 'controller/conexion2.php';
+?>
+
 <link rel="stylesheet" type="text/css" href="vista/css/prueba.css">
 
 
@@ -102,10 +105,11 @@
       <p> 
      
      <?php
-         $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
-           
+        //  $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
+         
          $sql = "SELECT * FROM datosprueba where N_Dato=1" ;
-         $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
+         $resultado = $conn->query($sql);
+        //  $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
          if(empty($resultado)){
          }
          else{
