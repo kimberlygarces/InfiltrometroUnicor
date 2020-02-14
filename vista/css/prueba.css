@@ -1,0 +1,93 @@
+
+.detalle{
+    /* background-color: #1CE32B; */
+      padding: 16px 16px;
+      cursor: pointer;
+      outline: none;
+      /* color: #fff; */
+      border: none;
+      border-radius: 10px;
+      border-style: outset;
+      border-color: #1CE32B;
+      /* box-shadow: 0 9px #999; */
+  }
+  
+  #prueba{
+    border: none;
+    cursor: pointer;
+    width:650px;
+    outline: none;
+    margin-left: 29px;
+    margin-bottom: 1px;
+  
+  }
+  
+  .table2{
+    cursor: pointer;
+     overflow:scroll;
+       height:400px;
+       width:700px;
+       border-style: outset;
+      border-color: #1CE32B;
+      border-radius: 10px;
+  
+  }
+  
+  table{
+    width:600px;
+  
+  
+  }
+  th{
+      border-bottom: 1px solid #c4c0c9;
+      border-right: 1px solid #c4c0c9;
+  
+  }
+  td{
+      border-right: 1px solid #c4c0c9;
+  
+  }
+  
+  #more {display: none;}
+  #more2 {display: none;}
+  
+  #myBtn, #myBtn2{
+    width:200px;
+    border-radius: 10px;
+
+  
+  
+  }
+
+  h1{
+    color:  rgb(8, 8, 8);
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    font: italic bold 40px Georgia, Serif;
+    text-shadow: -4px 3px 0 rgb(226, 214, 214), -14px 7px 0 #B6FAB9;
+  
+    }
+
+    h4, h2{
+      font: italic bold 20px Georgia, Serif;
+
+    }
+  
+    button:hover {
+      background-color: #1CE32B;
+      /* padding: 14px 16px; */
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px rgb(135, 223, 157);
+    }
+
+    #btonDoc{
+      width:60px;
+      margin: 5px;
+
+
+    }

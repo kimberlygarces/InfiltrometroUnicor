@@ -18,7 +18,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button  onclick="location='Prueba_en_curso.php'" class="btn btn-default animated tada duration-30s"> 
+  <button  id="iniciobtn" onclick="location='Prueba_en_curso.php'" class="btn btn-default animated tada duration-30s"> 
   <img src="img/prueba.png" alt="x" />
   <h5 class="mb-1">Prueba en curso</h5>
 
@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="col-lg-4 col-sm-12">
 <ul class="list-unstyled list-inline py-2">
   <li class="list-inline-item">
-  <button onclick="location='historial.php'" class="btn btn-default animated tada duration-30s">
+  <button id="iniciobtn" onclick="location='historial.php'" class="btn btn-default animated tada duration-30s">
   <img src="img/historial.png" alt="x" />
   <h5 class="mb-1">Historial</h5>
 

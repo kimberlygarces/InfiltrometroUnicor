@@ -2,7 +2,7 @@ body{
     background-color: #F8F9F9 ;
   }
   
-  button:hover {
+  /* #iniciobtn:hover {
     background-color: #1CE32B;
     padding: 34px 36px;
     width: 200px;
@@ -14,7 +14,7 @@ body{
     border-radius: 15px;
     box-shadow: 0 2px #999;
     
-  }
+  } */
   
   .animated {
     -webkit-animation-duration: 1s;

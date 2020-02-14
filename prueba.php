@@ -1,65 +1,6 @@
-<STYLE>
-.detalle{
-  /* background-color: #1CE32B; */
-    padding: 16px 16px;
-    cursor: pointer;
-    outline: none;
-    /* color: #fff; */
-    border: none;
-    border-radius: 10px;
-    border-style: outset;
-    border-color: #1CE32B;
-    /* box-shadow: 0 9px #999; */
-}
 
-#prueba{
-  border: none;
-  cursor: pointer;
-  width:650px;
-  outline: none;
-  margin-left: 29px;
-  margin-bottom: 1px;
-
-}
-
-.table2{
-  cursor: pointer;
-   overflow:scroll;
-     height:400px;
-     width:700px;
-     border-style: outset;
-    border-color: #1CE32B;
-    border-radius: 10px;
-
-}
-
-table{
-  width:600px;
-
-
-}
-th{
-    border-bottom: 1px solid #c4c0c9;
-    border-right: 1px solid #c4c0c9;
-
-}
-td{
-    border-right: 1px solid #c4c0c9;
-
-}
-
-#more {display: none;}
-#more2 {display: none;}
-
-#myBtn, #myBtn2{
-  width:300px;
-
-
-}
- 
-</STYLE>
-
-<link rel="stylesheet" type="text/css" href="vista/css/historial.css">
+<!-- <link rel="stylesheet" type="text/css" href="vista/css/historial.css"> -->
+<link rel="stylesheet" type="text/css" href="vista/css/prueba.css">
 
 <?php
 if (!isset($_GET['Id'])) {
@@ -70,8 +11,8 @@ require 'controller/conexion2.php';
 ?>
 
 <div class="container">
-<h1 class='animated bounce delay-20s'>Datos prueba</h1>
-
+ <h1 >Informe general</h1> 
+ 
   <div id="Mostrar" class="row align-items-start">
   <div class="col-sm-12 col-lg-4">
     <br>
@@ -79,6 +20,8 @@ require 'controller/conexion2.php';
     <div class="detalle text-center">
       <p> 
      <h4 id="dots">Datos adicionales de prueba de infiltración</h4>
+
+   
 
       <div id="more">
       <h4>Localización</h4>
@@ -92,7 +35,9 @@ require 'controller/conexion2.php';
 
       </div>
       </p>
-      <button  class="btn btn-success" onclick="myFunction()" id="myBtn">ver localización... </button>
+      <button  class="btn btn-success" onclick="myFunction()" id="myBtn">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      ver localización... </button>
 
       <div id="more2">
       <h4>Suelo</h4>
@@ -104,20 +49,32 @@ require 'controller/conexion2.php';
 
       </div>
       </p>
-      <button  class="btn btn-success" onclick="myFunction2()" id="myBtn2">ver suelo...</button>
+      <button  class="btn btn-success" onclick="myFunction2()" id="myBtn2">
+      <i class="fa fa-circle" aria-hidden="true"></i>
+      ver suelo...</button>
 
         <form action="controller/localizacion.php" method="post" class="form-group">
         </form>
-
-        <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
-    <button type="button" class="btn btn-danger">
-      <i class="fa fa-file-pdf-o fa-2x"> Descargar</i>
+      
+      </div>
+<br>
+      <div class="detalle">
+      <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
+    <button id="btonDoc" type="button" class="btn btn-danger">
+      <i data-toggle="tooltip" title="Generar documento PDF"class="fa fa-file-pdf-o fa-2x"> </i>
       </button></a>
-      
+       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
+    <button id="btonDoc" type="button" class="btn btn-success">
+    <i data-toggle="tooltip" title="Generar archivo ecxel"class="fa fa-file-excel-o fa-2x" ></i>
+      </button></a>
+      <a href=" controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
+    <button id="btonDoc" type="button" class="btn btn-warning">
+    <i data-toggle="tooltip" title="Generar grafica de datos" class="fa fa-line-chart fa-2x" ></i>
+      </button></a>
       </div>
-      
-      
+
       </div>
+
     <div class="col-sm-12 col-lg-8">
     <br>
 
@@ -212,32 +169,43 @@ function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("myBtn");
+  var btnText2 = document.getElementById("myBtn2");
+
 
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "ver localización..."; 
+    btnText.innerHTML = "Localización"; 
     moreText.style.display = "none";
+    btnText2.style.display = "inline";
+
   } else {
     dots.style.display = "none";
+    btnText2.style.display = "none";
     btnText.innerHTML = "cerrar"; 
     moreText.style.display = "inline";
   }
 
 }
   function myFunction2() {
-  var dots = document.getElementById("dots");
+    var dots = document.getElementById("dots");
   var moreText = document.getElementById("more2");
   var btnText = document.getElementById("myBtn2");
+  var btnText2 = document.getElementById("myBtn");
+
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "ver suelo..."; 
+    btnText.innerHTML = "Tipo de suelo"; 
     moreText.style.display = "none";
+    btnText2.style.display = "inline";
+
   } else {
     dots.style.display = "none";
     btnText.innerHTML = "cerrar"; 
     moreText.style.display = "inline";
+    btnText2.style.display = "none";
+
   }
 
   

@@ -17,6 +17,7 @@
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
+
 #navbar {
   width: 100%;
   background-color: #EDBB99;
@@ -79,13 +80,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <a class="nav-link" href="historial.php"><i class="fa fa-book fa-fw"></i> Historial </a>
       </li>
       </ul>
+
+
       <ul class="nav navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="controller/cerrarSesion.php?url=index.php"><i class="fa fa-fw fa-user"></i> Salir</a>
       </li>
        </ul>
-       
-   
 </div>
   </div>
 </nav>
