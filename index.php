@@ -32,7 +32,7 @@
                 <label for="inputPassword" class="sr-only">Contraseña</label>
                 <input type="password" id="password" name="pass" class="form-control" placeholder="Contraseña" required>
                 <br>
-                <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar seción</button>
+                <button class="btn btn-lg btn-secondary btn-block" type="submit">Inciar sesión</button>
                   
             </form>
 </div>
