@@ -1,14 +1,26 @@
 <?php
-// $server = 'localhost:3306';
-// $username = 'gabriel';
-// $password = 'clave';
-// $database = 'infiltrometro';
-
-$server = 'localhost';
-$username = 'root';
-$password = '';
+$server = 'localhost:3306';
+$username = 'gabriel';
+$password = 'clave';
 $database = 'infiltrometro';
 
-    $conn = new mysqli($server, $username, $password, $database);
+// $server = 'localhost';
+// $username = 'root';
+// $password = '';
+// $database = 'infiltrometro';
 
-?>
+$conn = new mysqli($server, $username, $password, $database);
+
+if ($conn->connect_error){
+    // $server = 'localhost:3306';
+    // $username = 'gabriel';
+    // $password = 'clave';
+    // $database = 'infiltrometro';
+
+    $server = 'localhost';
+    $username = 'root';
+    $password = '';
+    $database = 'infiltrometro';
+
+    $conn = new mysqli($server, $username, $password, $database);
+}
