@@ -22,7 +22,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   width: 100%;
   background-color: #EDBB99;
   overflow: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .navbar a {
@@ -35,14 +35,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .navbar a:hover {
   background-color: #1CE32B;
-  padding: 14px 16px;
+  padding: 11px 16px;
   border-radius: 10px;
   
 }
 
 .navbar-brand {
   background-color: #41F308;
-  border-radius: 20px;
+  border-radius: 15px;
   
 }
 

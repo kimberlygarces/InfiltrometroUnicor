@@ -19,9 +19,12 @@ $filas = $resultado->num_rows;
 $conn->close();
 if ($filas == !0) {
     // echo "num filas:  ".$filas."<br>";
-    $_SESSION['usuario'] = "";
+    $_SESSION['usuario'] = $correo;
+
     // echo "Sesion:  ".$_SESSION."<br>";
     header("location: inicio.php");
 } else {
     header('location:index.php?ci');
 }
+?>
+

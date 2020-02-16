@@ -1,15 +1,15 @@
 
 <?php
-$server = 'localhost:3306';
-$username = 'gabriel';
-$password = 'clave';
-$database = 'infiltrometro';
+// $server = 'localhost:3306';
+// $username = 'gabriel';
+// $password = 'clave';
+// $database = 'infiltrometro';
 // $server = 'localhost';
 // $username = 'root';
 // $password = '';
 // $database = 'infiltrometro';
-$conn = new mysqli($server, $username, $password, $database);
-if ($conn->connect_error){
+// $conn = new mysqli($server, $username, $password, $database);
+// if ($conn->connect_error){
     // $server = 'localhost:3306';
     // $username = 'gabriel';
     // $password = 'clave';
@@ -19,6 +19,6 @@ if ($conn->connect_error){
     $password = '';
     $database = 'infiltrometro';
     $conn = new mysqli($server, $username, $password, $database);
-}
+// }
 
 ?>
