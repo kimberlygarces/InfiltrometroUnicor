@@ -23,8 +23,14 @@ if ($filas == !0) {
 
     // echo "Sesion:  ".$_SESSION."<br>";
     header("location: inicio.php");
+    echo '<script language="javascript">alert("juas");</script>';
+
+    
 } else {
-    header('location:index.php?ci');
+    // header('location:index.php?ci');
+    echo '<script language="javascript">alert("Error de autentificacion");window.location.href="index.html"</script>';
+
+    
 }
 ?>
 
