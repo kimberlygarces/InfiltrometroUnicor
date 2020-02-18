@@ -1,6 +1,4 @@
-body{
-    background-color: #F8F9F9 ;
-  }
+
   
   /* #iniciobtn:hover {
     background-color: #1CE32B;
@@ -27,15 +25,15 @@ body{
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
   }
-
-
-  .jumbotron {
-  margin-bottom: 0px;
-  background-image: url(../../img/cultivo.jpeg);
-  background-position: 0% 25%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  text-shadow: black 0.3em 0.3em 0.3em;
   
-}
+  h1{
+    color:#030303;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+    font: italic bold 40px Georgia, Serif;
+    text-shadow: -4px 3px 0 rgb(28, 43, 29) , -14px 7px 0 #B6FAB9;
+
+    }
+
+

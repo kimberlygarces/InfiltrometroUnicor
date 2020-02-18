@@ -18,41 +18,37 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
 
-#navbar {
-  width: 100%;
-  background-color: #EDBB99;
-  overflow: auto;
-  border-radius: 5px;
-}
 
 .navbar a {
   color: #f2f2f2;
   text-align: center;
-  padding: 11px 16px;
+  padding: 5px 5px;
   text-decoration: none;
   font-size: 20px;
 }
 
 .navbar a:hover {
   background-color: #1CE32B;
-  padding: 11px 16px;
-  border-radius: 10px;
+  padding: 5px 5px;
+  border-radius: 5px;
+
   
 }
 
 .navbar-brand {
   background-color: #41F308;
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
   
 }
 
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 50px) {
   .navbar a {
     float: none;
     display: block;
   }
-
-
 }
 
 </style>
