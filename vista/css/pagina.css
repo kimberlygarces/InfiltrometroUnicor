@@ -41,6 +41,7 @@
   .inicio .col-sm-7{
     margin: 15px;
     
+    
   }
   .menu{
     padding: 10px;
@@ -82,13 +83,15 @@
   
     .inicio .col-sm-4 {
       padding: 10px;
-      padding-left: 5px;
+      padding-left: 15px;
       border-radius: 0px 0px 40px 0px;
       color:#040404;
       font: italic bold 20px Georgia, Serif;
-      margin: 25px;
+      margin-top: 25px;
+      margin-left: 9px;
+
       height: 70px; 
-      background-color:rgb(139, 22, 22);
+      background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(107, 66, 66), rgb(139, 22, 22)) ;
   
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(64, 233, 13),#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
@@ -97,7 +100,7 @@
     .encurso{
       padding: 15px;
       border-radius: 13em/3em;
-      background-color: #E5E8E8;
+      background:linear-gradient(30deg, #9493d3, rgb(187, 193, 224) ,rgb(134, 138, 199), rgb(178, 177, 226));
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(116, 225, 65) ,#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
       font: italic bold 15px Georgia, Serif;
@@ -109,7 +112,7 @@
     
     }
     body{
-      background:linear-gradient(30deg, #e3fc07, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(253, 255, 255));
+      background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(253, 255, 255));
   
     }
   
