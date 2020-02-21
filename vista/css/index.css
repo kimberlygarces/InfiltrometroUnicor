@@ -30,23 +30,23 @@
    {
        padding:9px 15px;
        border-bottom:1px solid #eee;
-       background-image: url(../../img/cultivo.jpeg);
-   }
+       background-image: url(../../img/image.jpg);
+      }
    .modal-header .close{margin-top:2px}
    .modal-header h3{margin:0;line-height:30px;
     color:#030303;
       font-weight: 500}
   
    .modal-body{
-    background-image: url(../../img/cultivo.jpeg);
-    
-   }
+    background-image: url(../../img/image.jpg);
+       }
   
    .modal-footer{
   
-    background-image: url(../../img/cultivo1.1.jpg);
+    background-image: url(../../img/image1.jpg);
    }
   
+   
    .modal-backdrop
   {
       opacity:0.7 !important;

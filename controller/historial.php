@@ -9,14 +9,12 @@
 			$prueba = $d->getPrueba();
 	
 		foreach($prueba as $p){
-		$sql = "INSERT INTO historialdatos values (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."')";
+		$sql = "INSERT INTO historialdatos values (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."',default, default)";
 	
 		//3.ejecutar la consulta
 		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
 		header("Location: ../inicio.php");
 		}
-
-
 
 				mysqli_select_db($conexion, "infiltrometro");
 

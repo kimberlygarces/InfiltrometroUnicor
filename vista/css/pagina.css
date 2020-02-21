@@ -26,14 +26,94 @@
     animation-iteration-count: infinite;
   }
   
-  h1{
-    color:#030303;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 500;
-    font: italic bold 40px Georgia, Serif;
-    text-shadow: -4px 3px 0 rgb(28, 43, 29) , -14px 7px 0 #B6FAB9;
 
+  
+  .col-sm-7 {
+    margin: 155px;
+  
+  }
+  
+ 
+  .table .btn{
+    font: italic bold 15px Georgia, Serif;
+  
+  }
+  .inicio .col-sm-7{
+    margin: 15px;
+    
+  }
+  .menu{
+    padding: 10px;
+    padding-left: 60px;
+    border-radius: 5px;
+    background-color: #41F308;
+    color: #F8F9F9;
+    margin: 15px;
+  
+  }
+
+
+/*   
+      .footer-copyright{
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        width:100%;
+      } */
+      h1{
+      margin: 0 auto;
+      text-align: center;
+      /* font-weight: 500; */
+      font-family:  Arial, Helvetica, sans-serif;
+      font-weight: 100;
+      font-size: 30px;
+      text-shadow: -1px 1px 0 rgb(28, 43, 29) , -3px 5px 0 #B6FAB9;
+  
+      }
+  
+      .table2{
+      cursor: pointer;
+      /* overflow:scroll; */
+      height:500px;
+    
     }
+    
+  
+  
+    .inicio .col-sm-4 {
+      padding: 10px;
+      padding-left: 5px;
+      border-radius: 0px 0px 40px 0px;
+      color:#040404;
+      font: italic bold 20px Georgia, Serif;
+      margin: 25px;
+      height: 70px; 
+      background-color:rgb(139, 22, 22);
+  
+      /* background-image: url(img/cultivo.jpeg); */
+      /* background:linear-gradient(30deg, rgb(64, 233, 13),#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
+    }
+  
+    .encurso{
+      padding: 15px;
+      border-radius: 13em/3em;
+      background-color: #E5E8E8;
+      /* background-image: url(img/cultivo.jpeg); */
+      /* background:linear-gradient(30deg, rgb(116, 225, 65) ,#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
+      font: italic bold 15px Georgia, Serif;
+      margin: 30px;
+      height: 120px; 
+      width: 270px;
+      text-align: center;
+      color:#040404;
+    
+    }
+    body{
+      background:linear-gradient(30deg, #e3fc07, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(253, 255, 255));
+  
+    }
+  
+
+    
 
 

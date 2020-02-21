@@ -9,6 +9,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
   <script type="text/javascript" src="js/datos.js"></script>
 
   <!-- animacion  -->
@@ -17,7 +19,12 @@
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
-
+nav{
+  width: 100%;
+  background-color: #EDBB99;
+  overflow: auto;
+  
+}
 
 .navbar a {
   color: #f2f2f2;
@@ -70,7 +77,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ">
       <li class="nav-item">
-        <a class="nav-link" href="Prueba_en_curso.php"><i class="fa fa-pencil fa-fw"></i>Prueba en curso</a>
+        <a class="nav-link" href="pruebaencurso.php"><i class="fa fa-pencil fa-fw"></i>Prueba en curso</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="historial.php"><i class="fa fa-book fa-fw"></i> Historial </a>

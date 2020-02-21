@@ -22,7 +22,6 @@ nav{
   width: 100%;
   background-color: #EDBB99;
   overflow: auto;
-  border-radius: 3px;
 }
 
 .navbar a {

@@ -14,129 +14,61 @@ if (!isset($_SESSION['usuario'])) {
 
 <link rel="stylesheet" type="text/css" href="vista/css/pagina.css">
 <style>
-.inicio .col-sm-4 {
-  padding: 10px;
-  padding-left: 5px;
-  border-radius: 0px 0px 40px 0px;
-  background-color: #41F308;
-  color: #F8F9F9;
-  font: italic bold 20px Georgia, Serif;
-  margin: 25px;
-  height: 70px; 
-  
-}
-
-.col-sm-7 {
-  margin: 155px;
-
-}
-
-.encurso{
-  padding: 15px;
-  border-radius: 13em/3em;
-  background-color: #E6F901;
-  font: italic bold 15px Georgia, Serif;
-  margin: 30px;
-  height: 120px; 
-  width: 270px;
-  text-align: center;
-  color:#17202A;
-
-
-}
-.table .btn{
-  font: italic bold 15px Georgia, Serif;
-
-}
-.inicio .col-sm-7{
-  margin: 15px;
 
   
-}
-.menu{
-  padding: 10px;
-  padding-left: 60px;
-  border-radius: 5px;
-  background-color: #41F308;
-  color: #F8F9F9;
-  margin: 15px;
-
-}
-
-
-    /* .footer-copyright{
-      position:fixed;
-      left:0px;
-      bottom:0px;
-      width:100%;
-    } */
-    h1{
-    margin: 0 auto;
-    text-align: center;
-    font-weight: 500;
-    font-family: "Homer Simpson UI";
-    font-size: 30px;
-    text-shadow: -1px 1px 0 rgb(28, 43, 29) , -3px 5px 0 #B6FAB9;
-
-    }
-
-    .table2{
-    cursor: pointer;
-    /* overflow:scroll; */
-    height:400px;
-  
-  }
-  
-
-
 </style>
 
-    <div class="inicio">
-    <div class="row">
-        <div class="col-sm-4 .bg-white">
-        <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> <?php echo '<p>'."  ".$user. '</p>';?></p>
-        <div class="encurso">
-        <p>Existe prueba en curso</p>
 
+<div class="inicio">
+      <div class="row">
+       <div class="col-sm-4 .bg-white">
+
+       <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> 
+       <?php echo '<p>'."  ".$user. '</p>';?></p>
+
+       <br>
+        <div id="btncurso" class="encurso">
+        <p>Existe prueba en curso</p>
+        
+        <div>
        <?php
-        //  $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
          
          $sql = "SELECT * FROM datosprueba where N_Dato=1" ;
          $resultado = $conn->query($sql);
-        //  $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
          if(empty($resultado)){
          }
          else{
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
-          echo '<button  id="iniciobtn" onclick="location="Prueba_en_curso.php"" class="btn btn-default">';
-           echo"<button onclick=location='Prueba_en_curso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
+          echo '<button  id="iniciobtn" onclick="location="pruebaencurso.phpp"" class="btn btn-default">';
+           echo"<button id='dots' onclick=location='pruebaencurso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
           "<img src='img/prueba.png' width='30' height='30' class='animated tada delay-20s'/>   ".
           $registro["Id_Prueba"].
-          "<i class='fa fa-spinner fa-spin fa-2x fa-fw' ></i>".
-
-        '</div>';
-           "</button>";
-
-          //  echo"<button onclick=location='localizacion.php?Id=$registro[Id_Prueba]' class='btn btn-primary'>".'AGREGAR'."</button>";
-
+          "<i class='fa fa-spinner fa-spin fa-2x fa-fw'  ></i>".
+           "</button>";         
          }
        }
        ?>
+       </div>
+       </div>
       </div>
+      <br></br>
  
-        <br></br>
     <br></br>
-        <!-- TABLA DE HISTORIAL DE PRUEBAS -->
+    <br></br>
+           <div class="col-sm-7" >
 
-        <div class="col-sm-7 .bg-info">
-          <h1>Historial de pruebas</h1>  
-          <br>
-          <div class="table-responsive">
+         <div class="table-responsive">
         <div class="table2" >
           <table class="table  table-striped table-hover">
-              <tbody id="myTable">
-
+          <thead>
+          <tr>
+          <th ><h1>Historial de pruebas</h1></th>
+          <tr>  
+            </thead>
+          
+              
+          <tbody id="myTable">
          <?php
            //Conectarse al servidor mysql
          $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
@@ -158,9 +90,8 @@ if (!isset($_SESSION['usuario'])) {
              "</button>";
              echo '</td>';
              echo '<td>';
-           echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left'></i>";
+           echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='Prueba_en_curso.php?Id=".$registro['Id_Prueba']."' ></i>";
 
-//           echo"<p>".$registro["Id_Prueba"]."</p>";
              echo '</td>';
              echo '</tr>';     
          }
@@ -171,43 +102,12 @@ if (!isset($_SESSION['usuario'])) {
         </table>
         </div>
       </div>
+
         </div>
+        </div>
+
       </div>
-    </div>
-    </div>
 
- 
-
-    
-    
-<!-- <div class="container">
-
-<div class="row">
-    <div class="col-sm-3" >
-    <div class="menu">
-    <button  id="iniciobtn" onclick="location='Prueba_en_curso.php'" class="btn btn-default animated tada duration-30s"> 
-        <img src="img/prueba.png" width="50" height="50" /> 
-        <h5 class="mb-1">Prueba en curso</h5> 
-      </button>
-       </div>
-       
-       <div class="menu">
-       
-       <button id="iniciobtn" onclick="location='historial.php'" class="btn btn-default animated tada duration-30s">
-        <img  src="img/historial.png" width="50" height="50"/> -->
-        <!-- <h5 class="mb-1">historial de prueba</h5> -->
-        <!-- </button>
-
-    </div>
-    <div class="col-sm-5">
-   </div>
-</div>
-</div>
-</div>
-</div> -->
-
-
-     
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark pt-4">
 
@@ -218,4 +118,6 @@ if (!isset($_SESSION['usuario'])) {
 </footer>
 
 </body>
+
+
 </html>
