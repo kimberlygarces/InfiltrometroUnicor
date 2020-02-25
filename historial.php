@@ -4,7 +4,8 @@
           <div class="container">
             <br>
           <h1>Historial de pruebas</h1>
-
+          <input class="form-control" id="myInput" type="text" placeholder="Buscar">
+<br>
           <div class="table-responsive">
         <div class="table2" >
           <table class="table  table-striped table-hover">
@@ -15,7 +16,6 @@
 
           <tr>  
             </thead>
-            <input class="form-control" id="myInput" type="text" placeholder="Buscar">
 
               
           <tbody id="myTable">

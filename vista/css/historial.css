@@ -13,16 +13,26 @@ body{
     text-shadow: -1px 1px 0 rgb(28, 43, 29) , -3px 5px 0 #B6FAB9;
 
     }
+ 
     .table2{
       cursor: pointer;
-      /* overflow:scroll; */
-      height:500px;
+      overflow:scroll;
+      height:400px;
+      border-radius: 15px;
+
     
     }
 
-  
-    .table .btn{
-      font: italic bold 15px Georgia, Serif;
+    .table{
+      border-radius: 5PX;
+      
+
+    }
     
+    .table-responsive{
+      border-radius: 15px;
+      -webkit-box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);
+      box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);  
     }
   

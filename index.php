@@ -17,61 +17,68 @@
 <!-- The slideshow -->
 <div class="carousel-inner">
   <div class="carousel-item active">
-  <img src="img/cultivo.jpeg" alt="" width="100%" height="500px">
-  <div class="container">
-          <div class="carousel-caption text-left">
+  <img id="fondo"src="img/cultivo.jpeg" alt="" width="100%" height="100%">
+  <div class="row" id="imgone">
+  <div class="col-sm-12 col-lg-8">
+          <div class="carousel-caption">
             <img class="animated  fadeIn" src="img/user.png">
-            <h1>Inficor</h1>
             <br>
             <p>Visualización de los datos en tiempo real durante el proceso de Infiltración del agua en el suelo</p>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               Ingresar
             </button>      
-      
+            </div>
           </div>
         </div>
   </div>
+
   <div class="carousel-item">
-    <img src="img/cultivo2.jpg" alt="" width="100%" height="500px">
-    <div class="container">
-          <div class="carousel-caption">
-            <img class="animated  fadeIn" src="img/user.png">
-            <h1>Inficor</h1>
-            <br>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-              Ingresar
-            </button>      
-      
-          </div>
-        </div>
+  <img id="fondo"src="img/cultivo2.jpg" alt="" width="100%" height="100%">
+  <div class="row" id="imgtwo" >
+  <div class="col-sm-12 col-lg-5">
   </div>
-  <div class="carousel-item">
-    <img src="img/paisaje.jpg" alt="" width="100%" height="500px">
-    <div class="container">
+  <div class="col-sm-12 col-lg-6">
           <div class="carousel-caption">
-            <img class="animated  fadeIn" src="img/user.png">
-            <h1>Inficor</h1>
-            <br>
+          <div align="left">
+          <img class="animated  fadeIn" src="img/unicor_opt.png">
+          Universidad de Córdoba 
+          </div> 
+          <div align="right">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               Ingresar
-            </button>      
-      
+            </button>   
+            </div>    
+            </div>
           </div>
         </div>
+     </div>
+
+  <div class="carousel-item">
+  <img id="fondo"src="img/paisaje.jpg" alt="" width="100%" height="100%">
+  <div class="row" id="imgthree" >
+  <div class="col-sm-12 col-lg-6">
   </div>
-  <div class="carousel-item">
-    <img src="img/cultivo.jpeg" alt="" width="100%" height="500px">
-    <div class="container">
+  <div class="col-sm-12 col-lg-5">
           <div class="carousel-caption">
-            <img class="animated  fadeIn" src="img/user.png">
-            <h1>Inficor</h1>
-            <br>
+          <div align="left">
+          <!-- <img class="animated  fadeIn" src="img/user.png"> -->
+        <h1>Inficor</h1>
+        El Dispositivo electrocico permite captura de datos, durante el proceso de Infiltración del agua en el suelo.
+        </div> 
+          <div align="right">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
               Ingresar
-            </button>      
-      
+            </button>   
+            </div>    
+            </div>
           </div>
         </div>
+     </div>
+    
+
+
+
+
   </div>
 </div>
 
@@ -83,7 +90,7 @@
   <span class="carousel-control-next-icon"></span>
 </a>
 </div>
-<!-- ::::::::::::::::::::::::::::::::::MODA::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::MODAl::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <div class="modal fade" id="myModal">
 <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">

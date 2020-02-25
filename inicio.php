@@ -22,10 +22,11 @@ if (!isset($_SESSION['usuario'])) {
 <div class="inicio">
       <div class="row">
        <div class="col-sm-4 .bg-white">
+       <div class="col-sm-12 .bg-white">
 
        <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> 
        <?php echo '<p>'."  ".$user. '</p>';?></p>
-
+        </div>
        <br>
         <div id="btncurso" class="encurso">
         <p>Existe prueba en curso</p>
@@ -57,13 +58,14 @@ if (!isset($_SESSION['usuario'])) {
     <br></br>
     <br></br>
            <div class="col-sm-7" >
-
+           <h1>Historial de pruebas</h1>
+<br>
          <div class="table-responsive">
         <div class="table2" >
           <table class="table  table-striped table-hover">
           <thead>
           <tr>
-          <th ><h1>Historial de pruebas</h1></th>
+          <th ></th>
           <tr>  
             </thead>
           

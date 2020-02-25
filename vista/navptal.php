@@ -15,13 +15,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+  width: auto;
+
+}
 
 
 nav{
-  width: 100%;
+  width: auto;
   background-color: #EDBB99;
   overflow: auto;
+  
+  
 }
 
 .navbar a {

@@ -12,13 +12,16 @@
   
   
   h1{
-  color:#030303;
-  margin: 0 auto;
-  font-weight: 500;
-  font: italic bold 40px Georgia, Serif;
-  text-shadow: -4px 3px 0 #1CE32B , -14px 7px 0 #B6FAB9;
-  
-  }
+    margin: 0 auto;
+    text-align: center;
+    /* font-weight: 500; */
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    color: black;
+
+
+    }
   #myModal {
     margin-bottom: 0px;
     color: white;
@@ -118,6 +121,10 @@
       margin-bottom: 1.25rem;
       font-size: 1.25rem;
       line-height: 1.4;
+      color: black;
+      font-weight: 900;
+      font-family:  Arial, Helvetica, sans-serif;
+
     }
   
     .featurette-heading {
@@ -133,12 +140,13 @@
 
   
 .carousel .btn{
-  background-color: #E5E8E8;
-  color:#34495E;
+  background-color: rgb(85, 86, 94);
+  color:rgb(200, 207, 214);
   border-radius: 10px;
   padding: 6px;
   width: 150px;
-  font: italic bold 20px Georgia, Serif;
+  font-weight: 900;
+  font-family:  Arial, Helvetica, sans-serif;
 
 }
 .carousel .btn:hover{
@@ -146,8 +154,92 @@
   color:#34495E;
   border-radius: 5px;
   width: 150px;
-  font: italic bold 21px Georgia, Serif;
+  font-weight: 900;
+  font-family:  Arial, Helvetica, sans-serif;
 
 
 }
-  
+
+
+
+/* .container .carousel-caption{
+background-color: rgba(85, 85, 109, 0.5);
+border-radius: 14px;
+text-align: center;
+width: 50%;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+} */
+
+
+#imgone .carousel-caption{
+
+  background-color: rgba(214, 214, 228, 0.61);
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#imgtwo .carousel-caption{
+
+  background-color: rgba(214, 214, 228, 0.664);
+  border-radius: 14px;
+  margin-bottom: 30%;
+  box-shadow: -12px -9px 18px 0px rgba(0,0,0,0.75);
+}
+#imgtwo div{
+  color: #030303;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 9px;
+
+}
+
+h1{
+  margin: 0 auto;
+  text-align: center;
+  font-family:  Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+
+  }
+
+#imgthree .carousel-caption{
+
+  background-color: rgba(214, 214, 228, 0.61);
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 20%;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+#imgthree  div{
+  color: #030303;
+  font-size: 18px;
+  padding: 9px;
+
+}
+
+#imgfour .carousel-caption{
+
+  background-color: rgba(214, 214, 228, 0.664);
+  border-radius: 14px;
+  margin-bottom: 20%;
+  margin-right: 40%;
+  box-shadow: -12px -9px 18px 0px rgba(0,0,0,0.75);
+  text-align: right;
+
+}
+
+#imgfour div{
+  color: #030303;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+
