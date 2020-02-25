@@ -3,21 +3,23 @@
 
           <div class="container">
             <br>
+
           <h1>Historial de pruebas</h1>
-          <input class="form-control" id="myInput" type="text" placeholder="Buscar">
-<br>
-          <div class="table-responsive">
-        <div class="table2" >
-          <table class="table  table-striped table-hover">
-          <thead>
-          <tr>
-          <th ></th>
           <br>
 
-          <tr>  
-            </thead>
+          <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">           
+           <i class="fa fa-search"></i>
+          </label>
+          </div>
+          <input class="form-control" id="myInput" type="text" placeholder="Buscar prueba">
+          </div>
 
-              
+          <br>
+          <div class="table-responsive">
+        <div class="table2" >
+          <table class="table  table-striped table-hover">       
           <tbody id="myTable">
          <?php
            //Conectarse al servidor mysql
@@ -40,9 +42,9 @@
              "</button>";
              echo '</td>';
              echo '<td>';
-           echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='Prueba_en_curso.php?Id=".$registro['Id_Prueba']."' ></i>";
+              echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' ></i>";
+              echo '</td>';
 
-             echo '</td>';
              echo '</tr>';     
          }
        }

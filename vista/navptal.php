@@ -24,7 +24,6 @@ body {font-family: Arial, Helvetica, sans-serif;
 nav{
   width: auto;
   background-color: #EDBB99;
-  overflow: auto;
   
   
 }
@@ -47,7 +46,7 @@ nav{
 
 .navbar-brand {
   background-color: #41F308;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   width: 150px;
   

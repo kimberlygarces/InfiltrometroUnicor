@@ -8,16 +8,22 @@ body{
     text-align: center;
     /* font-weight: 500; */
     font-family:  Arial, Helvetica, sans-serif;
-    font-weight: 100;
+    font-weight: 900;
     font-size: 30px;
-    text-shadow: -1px 1px 0 rgb(28, 43, 29) , -3px 5px 0 #B6FAB9;
 
     }
  
-    .table2{
+.input-group{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+
+}
+
+
+.table2{
       cursor: pointer;
       overflow:scroll;
-      height:400px;
+      height:380px;
       border-radius: 15px;
 
     
@@ -31,8 +37,6 @@ body{
     
     .table-responsive{
       border-radius: 15px;
-      -webkit-box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);
-      box-shadow: -15px -8px 44px 0px rgba(0,0,0,0.75);  
+      box-shadow: -9px -6px 9px 0px rgba(0,0,0,0.75);
     }
   

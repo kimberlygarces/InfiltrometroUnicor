@@ -12,7 +12,7 @@ if (!isset($_SESSION['usuario'])) {
 ?>
 <?php require 'vista/nav.php' ?>
 
-<link rel="stylesheet" type="text/css" href="vista/css/pagina.css">
+<link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
 <style>
 
   
@@ -62,14 +62,7 @@ if (!isset($_SESSION['usuario'])) {
 <br>
          <div class="table-responsive">
         <div class="table2" >
-          <table class="table  table-striped table-hover">
-          <thead>
-          <tr>
-          <th ></th>
-          <tr>  
-            </thead>
-          
-              
+          <table class="table  table-striped table-hover">     
           <tbody id="myTable">
          <?php
            //Conectarse al servidor mysql
@@ -92,8 +85,7 @@ if (!isset($_SESSION['usuario'])) {
              "</button>";
              echo '</td>';
              echo '<td>';
-           echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='Prueba_en_curso.php?Id=".$registro['Id_Prueba']."' ></i>";
-
+             echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' ></i>";
              echo '</td>';
              echo '</tr>';     
          }
