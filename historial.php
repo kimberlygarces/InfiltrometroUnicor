@@ -1,12 +1,10 @@
 <?php require 'vista/nav.php' ?>
       <link rel="stylesheet" type="text/css" href="vista/css/historial.css">
 
-          <div class="container">
-            <br>
-
+      <div class="titulo">
           <h1>Historial de pruebas</h1>
-          <br>
-
+      </div>
+          <div class="container">
           <div class="input-group mb-3">
         <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01">           
@@ -37,12 +35,12 @@
             echo '<tr>';
              echo '<td>';
             echo"<button onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
-            "<img src='img/historial.png' width='30' height='30' class='animated tada delay-20s'/>   ".
+            "<img src='img/historial.png' width='20' height='20' class='animated tada delay-20s'/>   ".
             $registro["Id_Prueba"].
              "</button>";
              echo '</td>';
              echo '<td>';
-             echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."'></i>"; 
+             echo "<i class='fa fa-book fa-fw' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."'></i>"; 
                echo '</td>';
               //  echo '<td>';
               //  echo "<botton type='button' class='btn btn-success btn-sm' id='vermas'>"."<i class='' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."'>ver más</i>"."</button>";

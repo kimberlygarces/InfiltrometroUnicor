@@ -21,8 +21,8 @@ if (!isset($_SESSION['usuario'])) {
 
 <div class="inicio">
       <div class="row">
-       <div class="col-sm-4 .bg-white">
-       <div class="col-sm-12 .bg-white">
+       <div class="col-sm-5 .bg-white">
+       <div class="col-sm-10 .bg-white">
 
        <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> 
        <?php echo '<p>'."  ".$user. '</p>';?></p>
@@ -62,11 +62,12 @@ if (!isset($_SESSION['usuario'])) {
       <br></br>
     <br></br>
     <br></br>
-           <div class="col-sm-7" >
-           <h1>Historial de pruebas</h1>
-<br>
+           <div class="col-sm-6" >
+           <div class="titulo">
+          <h1>Historial de pruebas</h1>
+          </div>
          <div class="table-responsive">
-        <div class="table2" >
+          <div class="table2" >
           <table class="table  table-striped table-hover">     
           <tbody id="myTable">
          <?php

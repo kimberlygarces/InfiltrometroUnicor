@@ -1,6 +1,6 @@
 body{
-  background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(253, 255, 255));
-
+  background:linear-gradient(15deg, #6c6add, rgb(242, 243, 248) , #9998db ,rgb(233, 234, 247), rgb(59, 82, 207));
+ #6c6add
 }
 
   h1{
@@ -19,28 +19,36 @@ body{
 
 }
 
+.btn {
+  font-size: 15px;
+  color: rgb(43, 39, 39);
+  padding: 0%;
+  padding-left: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.table2 td{
+  height: 10px;
+}
 
 .table2{
       cursor: pointer;
       overflow:scroll;
       height:380px;
-      border-radius: 15px;
-
-    
-    }
-
-    .table{
-      border-radius: 5PX;
-      
-
     }
     
     .table-responsive{
-      border-radius: 15px;
+      border-radius: 5px;
       box-shadow: -9px -6px 9px 0px rgba(0,0,0,0.75);
+      background-color: rgb(227, 228, 238);
     }
 
-    #vermas{
-      border-radius: 6px;
+    .titulo{
+
+      background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(107, 66, 66), rgb(139, 22, 22)) ;
+      color: rgb(233, 234, 247);
+      padding: 9px;
+      margin-bottom: 15px;
     }
   

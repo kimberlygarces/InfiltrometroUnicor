@@ -17,11 +17,14 @@
     margin: 155px;
   
   }
-  
- 
   .table .btn{
-    font: italic bold 15px Georgia, Serif;
-  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;  
+    font-size: 15px;
+    color: rgb(43, 39, 39);
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 15px;
   }
   .inicio .col-sm-7{
     margin: 15px;
@@ -39,7 +42,7 @@
       h1{
       margin: 0 auto;
       text-align: center;
-      /* font-weight: 500; */
+      color: rgb(19, 2, 2);
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 900;
       font-size: 30px;
@@ -56,12 +59,11 @@
     .table-responsive{
       border-radius: 10px;
       box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
-      border: solid;
-      border-color:rgb(187, 177, 241);
+      background-color: rgb(227, 228, 238);
     }
   
   
-    .inicio .col-sm-12{
+    .inicio .col-sm-10{
       
       border-radius: 0px 0px 20px 0px;
       color:#dac9c9;
@@ -98,6 +100,12 @@
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 900;
     
+    }
+
+    .titulo{
+
+      padding: 9px;
+      margin-bottom: 15px;
     }
     body{
         background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(157, 149, 228));
