@@ -9,56 +9,23 @@ if (!isset($_GET['Id'])) {
 require 'vista/nav.php';
 require 'controller/conexion2.php';
 ?>
+<div id="cabecera">
+<div class="row">
 
-<div class="container">
- <h1 >Informe general</h1> 
- 
-  <div id="Mostrar" class="row align-items-start">
-  <div class="col-sm-12 col-lg-4">
-    <br>
+<div  class="col-sm-3">
 
-    <div class="detalle text-center">
-      <p> 
-     <h4 id="dots">Datos adicionales de prueba de infiltración</h4>
-
-   
-
-      <div id="more">
-      <h4>Localización</h4>
-
-      <label>Ciudad</label>
-            <input class="form-control" type="text" name="Ciudad">
-            <label>Coordenadas</label>
-            <input class="form-control" type="text" name="Coordenadas">
-            <label>Observaciones</label>
-            <input class="form-control" type="textArea" name="Observaciones">
-
-      </div>
-      </p>
-      <button  class="btn btn-success" onclick="myFunction()" id="myBtn">
-      <i class="fa fa-map-marker" aria-hidden="true"></i>
-      ver localización... </button>
-
-      <div id="more2">
-      <h4>Suelo</h4>
-            <label>TipoSuelo</label>            
-            <input class="form-control" type="text" name="TipoSuelo">
-            <label>Observaciones</label>
-            <input class="form-control" type="text" name="Observaciones">
-            <br>
-
-      </div>
-      </p>
-      <button  class="btn btn-success" onclick="myFunction2()" id="myBtn2">
-      <i class="fa fa-circle" aria-hidden="true"></i>
-      ver suelo...</button>
-
-        <form action="controller/localizacion.php" method="post" class="form-group">
-        </form>
-      
-      </div>
+</div>
+<!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
+<div  class="col-sm-9">
+<h1>Informe general</h1> 
+</div>
+</div>
+</div>
 <br>
-      <div class="detalle">
+<div class="row"> 
+ <div  class="col-sm-3" id="adi">
+    
+    <div class="detalle">
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
     <button id="btonDoc" type="button" class="btn btn-danger">
       <i data-toggle="tooltip" title="Generar documento PDF"class="fa fa-file-pdf-o fa-2x"> </i>
@@ -73,25 +40,11 @@ require 'controller/conexion2.php';
       </button></a>
       </div>
 
+
       </div>
-
-    <div class="col-sm-12 col-lg-8">
+    <div class="col-sm-9">
     <br>
-
-    <!-- <table class="table table-striped  text-center">
-
-      <thead>
-          <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
-          <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
-          <th data-toggle="tooltip" title="Lectura en escala"> l Escala </th>
-          <th data-toggle="tooltip" title="Infiltración parcial"> I Parcial (mm) </th>
-          <th data-toggle="tooltip" title="Infiltración acumulada"> IA (mm) </th>
-        
-        </thead>
-      </table> -->
     <div class="table-responsive">
-        <div class="table2" >
-
       <table class="table table-striped  text-center">
       <thead>
           <!-- <th>PRUEBA</th> -->
@@ -102,6 +55,10 @@ require 'controller/conexion2.php';
           <th data-toggle="tooltip" title="Infiltración acumulada"> IA (mm) </th>
         
         </thead>
+        </table>
+
+        <div class="table2" >
+      <table class="table table-striped  text-center">
         <tbody >
        
           <?php
@@ -147,6 +104,9 @@ require 'controller/conexion2.php';
       </div>
     </div>
     </div>
+    </div>
+    </div>
+           
     
   </div>
    <footer class="page-footer font-small unique-color-dark pt-4">

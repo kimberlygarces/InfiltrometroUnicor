@@ -42,9 +42,11 @@
              "</button>";
              echo '</td>';
              echo '<td>';
-              echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' ></i>";
-              echo '</td>';
-
+             echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."'></i>"; 
+               echo '</td>';
+              //  echo '<td>';
+              //  echo "<botton type='button' class='btn btn-success btn-sm' id='vermas'>"."<i class='' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."'>ver más</i>"."</button>";
+              // echo '</td>';
              echo '</tr>';     
          }
        }

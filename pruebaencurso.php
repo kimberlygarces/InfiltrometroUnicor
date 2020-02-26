@@ -2,7 +2,7 @@
 require 'controller/conexion2.php';
 ?>
 
-<link rel="stylesheet" type="text/css" href="vista/css/prueba.css">
+<link rel="stylesheet" type="text/css" href="vista/css/pruebaencurso.css">
 
 <!-- CODIGO DE LA PRUEBA EN CURSO -->
 <div id="cabecera">
