@@ -123,19 +123,23 @@ require 'controller/conexion2.php';
         </button>
 </div>
 <!--::::::::::::::::::::::::::::::::::::::::::::::::. TABLA CON LOS DATOS EN CURSO:::::::::::::::::::::::::::::::::::::::::::::: -->
-<div class="col-sm-8">
+<div class="col-sm-9">
        <br>
-       <div class="table-responsive">
-        <div class="table2 text-center">
-        <table class="table  table-striped table-hover" id="datos">
+       <div class="table-responsive text-center">
+       <table class="table  table-striped table-hover" id="datos">
+        <thead>
+        <tr>
+        <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
+        <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
+        <th data-toggle="tooltip" title="Lectura en escala"> l Escala </th>
+        <th>  </th>
 
-    <thead>
-      <tr>
-      <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
-      <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
-      <th data-toggle="tooltip" title="Lectura en escala"> l Escala </th>
-      </tr>
+        </tr>
+        </table>
     </thead>
+        <div class="table2 text-center">
+        <table class="table  table-striped table-hover">
+
     <tbody id="tbody">
           <!-- DATOS EN TIEMPO REAL-->
     </tbody>

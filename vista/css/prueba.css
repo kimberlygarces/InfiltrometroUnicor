@@ -25,8 +25,7 @@
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 3px;
     width: 350px;
-
-    
+    box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
 
   }
 
@@ -34,18 +33,16 @@
     padding: 5px;
     padding-left: 25px;
     color: black;
-
-
-
   }
+
+
   
   #adi{
     background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
     padding: 35px;
     width: 375px;
     text-align: center;
-
-
+    box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
   }
 
   #prueba{
@@ -62,12 +59,24 @@
   
   .table2{
     cursor: pointer;
-    /* overflow:scroll; */
-    height:450px;
-  
+    overflow:scroll;
+    height:380px;
   }
-  
-  
+
+  .table-responsive{
+    border-radius: 15px;
+  }
+
+
+.table-responsive .table thead{
+  background-color: rgb(156, 152, 177);
+
+}
+
+thead tr{
+  width: 2px;
+}
+
   #more {display: none;}
   #more2 {display: none;}
 
@@ -103,5 +112,10 @@
   #myBtn, #myBtn2{
     background:linear-gradient(30deg, #918feb, rgb(158, 168, 216) ,rgb(187, 190, 223), rgb(253, 255, 255));
     color: black;
+  
+  }
+
+  body{
+    background:linear-gradient(50deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgba(95, 69, 165, 0.925));
   
   }
