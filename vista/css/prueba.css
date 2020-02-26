@@ -13,7 +13,7 @@
 }
 
 #cabecera{
-  background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
+  background:linear-gradient(30deg, #9493d3, rgba(188, 195, 231, 0.733) ,rgb(233, 234, 247), rgb(155, 154, 224));
   height: 60px;
 
 }
@@ -65,17 +65,16 @@
 
   .table-responsive{
     border-radius: 15px;
+    background-color: rgb(215, 210, 245);
   }
 
 
 .table-responsive .table thead{
-  background-color: rgb(156, 152, 177);
+  background-color: rgba(163, 154, 212, 0.705);
 
 }
 
-thead tr{
-  width: 2px;
-}
+
 
   #more {display: none;}
   #more2 {display: none;}
@@ -116,6 +115,6 @@ thead tr{
   }
 
   body{
-    background:linear-gradient(50deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgba(95, 69, 165, 0.925));
+    background:linear-gradient(30deg, #dad9e6, rgb(226, 227, 238) , rgba(188, 195, 231, 0.733), rgb(155, 154, 224));
   
   }
