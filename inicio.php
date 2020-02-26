@@ -29,8 +29,6 @@ if (!isset($_SESSION['usuario'])) {
         </div>
        <br>
         <div id="btncurso" class="encurso">
-        <p>Existe prueba en curso</p>
-        
         <div>
        <?php
          
@@ -41,6 +39,7 @@ if (!isset($_SESSION['usuario'])) {
          else{
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
+          echo"<p>".'Existe prueba en curso'."</p>";
           echo '<button  id="iniciobtn" onclick="location="pruebaencurso.phpp"" class="btn btn-default">';
            echo"<button id='dots' onclick=location='pruebaencurso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
           "<img src='img/prueba.png' width='30' height='30' class='animated tada delay-20s'/>   ".
@@ -49,6 +48,12 @@ if (!isset($_SESSION['usuario'])) {
            "</button>";         
          }
        }
+
+       if(empty($resultado =="")){
+
+        echo"<p>".'En estos momentos no hay prueba en curso'."</p>";
+       }
+
        ?>
        </div>
        </div>

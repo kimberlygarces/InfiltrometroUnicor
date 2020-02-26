@@ -25,10 +25,6 @@
   }
   .inicio .col-sm-7{
     margin: 15px;
-    background-color: #cfcfe6cc;
-    border-radius: 15px;
-
-
   }
 
 
@@ -54,32 +50,22 @@
       cursor: pointer;
       overflow:scroll;
       height:450px;
-      border-radius: 15px;
- 
-
-    
+      border-radius: 5px;
     }
 
-    .table{
-      border-radius: 5PX;
-      
-
-    }
-    
     .table-responsive{
-      border-radius: 15px;
-      -webkit-box-shadow: 21px 23px 32px -10px rgba(0,0,0,0.75);
-      -moz-box-shadow: 21px 23px 32px -10px rgba(0,0,0,0.75);
-      box-shadow: 21px 23px 32px -10px rgba(0,0,0,0.75);
-      
-          
+      border-radius: 10px;
+      box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
+      border: solid;
+      border-color:rgb(187, 177, 241);
     }
   
   
     .inicio .col-sm-12{
       
-      border-radius: 0px 0px 40px 0px;
-      color:#040404;
+      border-radius: 0px 0px 20px 0px;
+      color:#dac9c9;
+      
       font: italic bold 20px Georgia, Serif;
       background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(107, 66, 66), rgb(139, 22, 22)) ;
       height: 65px;
@@ -89,14 +75,16 @@
       margin-top: 20px;
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 1000;
-      
+      box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.75);
+
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(64, 233, 13),#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
     }
   
     .encurso{
       padding: 15px;
-      border-radius: 13em/3em;
+      border-radius: 4px;
+      /* border-radius: 13em/3em; */
       background:linear-gradient(30deg, #9493d3, rgb(187, 193, 224) ,rgb(134, 138, 199), rgb(178, 177, 226));
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(116, 225, 65) ,#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
@@ -106,7 +94,7 @@
       width: 270px;
       text-align: center;
       color:#040404;
-      box-shadow: -12px -8px 26px -10px rgba(0,0,0,0.75);
+      box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 900;
     
