@@ -19,24 +19,26 @@
 #cabecera .col-sm-3{
     background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(107, 66, 66), rgb(139, 22, 22)) ;
     padding: 12px;
-    text-align: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     border-radius: 3px;
     width: 350px;
     box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
+    padding-left: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15;
+    font-weight: 700;
 
   }
 
   #cabecera .col-sm-9{
     padding: 5px;
     padding-left: 25px;
-    color: black;
-    
+    color: black;  
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20;
+    font-weight: 700;  
+    text-align: center;
   }
-
-
-  
   #adi{
     background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
     padding: 35px;
@@ -53,10 +55,13 @@
     margin-left: 29px;
     margin-bottom: 1px;
     background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
-
-  
   }
-  
+  .input-group{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 20px;
+  }
   .table2{
     cursor: pointer;
     overflow:scroll;
@@ -75,19 +80,8 @@
 
 }
 
-
-
   #more {display: none;}
   #more2 {display: none;}
-
-
-  h1{
-    margin: 0 auto;
-    text-align: center;
-    font-family:  Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight:900;
-    }
       
     button:hover {
       /* padding: 14px 16px; */

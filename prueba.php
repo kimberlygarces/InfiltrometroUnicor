@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="vista/css/prueba.css">
 
 <?php
+$idprueba=$_GET['Id'];
 if (!isset($_GET['Id'])) {
   header('location:historial.php');
 }
@@ -13,15 +14,19 @@ require 'controller/conexion2.php';
 <div class="row">
 
 <div  class="col-sm-3">
-
+<?php
+echo '<h6 id="dots">'.
+            "<img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
+            $idprueba.
+            '</h6>'
+ ?>
 </div>
 <!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
 <div  class="col-sm-9">
-<h1>Informe general</h1> 
+<h2>Informe general</h2> 
 </div>
 </div>
 </div>
-<br>
 <div class="row"> 
  <div  class="col-sm-3" id="adi">
     
@@ -43,7 +48,16 @@ require 'controller/conexion2.php';
 
       </div>
     <div class="col-sm-9">
-    <br>
+    <div class="col-sm-11">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">           
+           <i class="fa fa-search"></i>
+          </label>
+          </div>
+          <input class="form-control" id="myInput" type="text" placeholder="Buscar dato especifico de la prueba">
+          </div>
+          </div>
     <div class="table-responsive">
       <table class="table table-striped  text-center">
       <thead>
@@ -59,7 +73,7 @@ require 'controller/conexion2.php';
 
         <div class="table2" >
       <table class="table table-striped  text-center">
-        <tbody >
+      <tbody id="myTable">
        
           <?php
           if (!empty($_GET["Id"])) {
@@ -123,6 +137,22 @@ require 'controller/conexion2.php';
           $('[data-toggle="tooltip"]').tooltip();   
         });
         </script>
+
+<script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+          <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+         
 
 <script>
 function myFunction() {

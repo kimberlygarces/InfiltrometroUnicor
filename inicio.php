@@ -49,10 +49,10 @@ if (!isset($_SESSION['usuario'])) {
          }
        }
 
-       if(empty($resultado =="")){
+      //  if(empty($resultado =="")){
 
-        echo"<p>".'En estos momentos no hay prueba en curso'."</p>";
-       }
+      //   echo"<p>".'En estos momentos no hay prueba en curso'."</p>";
+      //  }
 
        ?>
        </div>

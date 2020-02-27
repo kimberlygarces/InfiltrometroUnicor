@@ -90,7 +90,6 @@
       background:linear-gradient(30deg, #9493d3, rgb(187, 193, 224) ,rgb(134, 138, 199), rgb(178, 177, 226));
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(116, 225, 65) ,#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
-      font: italic bold 15px Georgia, Serif;
       margin: 30px;
       height: 120px; 
       width: 270px;
@@ -99,14 +98,18 @@
       box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 900;
-    
     }
-
+    .encurso .btn{
+      font-family:  Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      padding: 0%;
+    }
     .titulo{
 
       padding: 9px;
       margin-bottom: 15px;
     }
+    
     body{
         background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(157, 149, 228));
 

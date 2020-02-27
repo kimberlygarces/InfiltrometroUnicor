@@ -17,10 +17,9 @@ require 'controller/conexion2.php';
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
             echo '<h6 id="dots">'.
-            "<img src='img/prueba.png' width='30' height='30' class='animated tada delay-20s'/>  ".
+            "<img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
             $registro["Id_Prueba"].
           //  "<i class='fa fa-clock-o' aria-hidden='true'></i>".
-
             // "<i class='fa fa-spinner fa-spin fa-2x fa-fw'  ></i>".
             '</h6>';
          }
