@@ -22,8 +22,11 @@ require 'controller/conexion2.php';
           //  "<i class='fa fa-clock-o' aria-hidden='true'></i>".
             // "<i class='fa fa-spinner fa-spin fa-2x fa-fw'  ></i>".
             '</h6>';
+            $idprueba=$registro["Id_Prueba"];
+
          }
        }
+
        ?>
 </div>
 <!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
@@ -38,14 +41,17 @@ require 'controller/conexion2.php';
   <div class="row">
  
   <div  class="col-sm-3" id="adi">
-  <form action="controller/pruebatotal.php" method="post" class="form-group">
 
+  <form action="controller/pruebatotal.php" method="post" class="form-group">
   <h4><i class="fa fa-map-marker" aria-hidden="true"></i>
     Localización</h4>
 
       <!-- <div id="more"> -->
         <div class="row">
         <div  class="col-sm-10">
+
+      <input type="hidden" name="Id" value="<?php echo $idprueba ?>" >
+
         <div class="form-group">
             <select class="form-control" id="exampleFormControlSelect1" name="Ciudad" >
             <option value="0" selected>Elija una Ciudad</option>
@@ -115,7 +121,7 @@ require 'controller/conexion2.php';
                 Registrar caracterización</button>  
                 <br>
 
-</from>
+      </from>
          <br>         
       <button onclick="location='controller/historial.php'" type="button" class="btn btn-danger">
         Finalizar Prueba
@@ -130,7 +136,7 @@ require 'controller/conexion2.php';
         <tr>
         <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
         <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
-        <th data-toggle="tooltip" title="Lectura en escala"> l Escala </th>
+        <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
         <th>  </th>
 
         </tr>

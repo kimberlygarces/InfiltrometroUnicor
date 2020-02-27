@@ -4,6 +4,7 @@
 
 <?php
 $idprueba=$_GET['Id'];
+
 if (!isset($_GET['Id'])) {
   header('location:historial.php');
 }
