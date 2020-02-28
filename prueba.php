@@ -30,7 +30,28 @@ echo '<h6 id="dots">'.
 </div>
 <div class="row"> 
  <div  class="col-sm-3" id="adi">
-    
+<!-- VER DATOS ADICIONALES DE LA PRUEBA -->
+    <div class="detalle">
+
+    <?php
+            $sql2 = "SELECT * FROM prueba WHERE Id = '" . $_GET["Id"] . "'";
+            //3.ejecutar la consulta
+            $resultado2 = $conn->query($sql2);
+            echo '<tr><td colspan="5"></td></tr>';
+            $i = 0;
+            while ($registro2 = $resultado2->fetch_assoc()) {
+
+              echo '<h4>'. "<i class='fa fa-map-marker' aria-hidden='true'></i>  " . $registro2["localizacion"] . '</h4>';
+              echo '<h4>' . $registro2["suelo"] . '</h4>';
+              echo '<h4>' . $registro2["Observaciones"] . '</h4>';
+            
+          }
+          ?>
+
+
+    </div>
+    <br>
+    <!-- BOTONES PARA DESCARGAR PDF, ECXEL Y GRAFICA -->
     <div class="detalle">
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
     <button id="btonDoc" type="button" class="btn btn-danger">
@@ -45,8 +66,6 @@ echo '<h6 id="dots">'.
     <i data-toggle="tooltip" title="Generar grafica de datos" class="fa fa-line-chart fa-2x" ></i>
       </button></a>
       </div>
-
-
       </div>
     <div class="col-sm-9">
     <div class="col-sm-11">
