@@ -11,23 +11,30 @@ require 'controller/conexion2.php';
 <?php
          $sql = "SELECT * FROM datosprueba where N_Dato=1" ;
          $resultado = $conn->query($sql);
-         if(empty($resultado)){
-         }
-         else{
-           $i=0;
-         while($registro = mysqli_fetch_array($resultado)){
-            echo '<h6 id="dots">'.
-            "<img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
-            $registro["Id_Prueba"].
-          //  "<i class='fa fa-clock-o' aria-hidden='true'></i>".
-            // "<i class='fa fa-spinner fa-spin fa-2x fa-fw'  ></i>".
-            '</h6>';
-            $idprueba=$registro["Id_Prueba"];
+         if(mysqli_num_rows($resultado)>0){
 
-         }
-       }
+             if(empty($resultado)){
+              }
+              else{
+                $i=0;
+
+              while($registro = mysqli_fetch_array($resultado)){
+                  echo '<h6 id="dots">'.
+                  "<img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
+                  $registro["Id_Prueba"].
+                  '</h6>';
+                  $idprueba=$registro["Id_Prueba"];
+              }
+            }
+          }else{
+            // EN CASO DE QUE NO EXISTA PRUEBA
+            echo"<script type=\"text/javascript\">alert('No hay prueba en curso'); window.location='inicio.php';</script>"; 
+          }
+      
 
        ?>
+
+
 </div>
 <!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
 <div  class="col-sm-9">

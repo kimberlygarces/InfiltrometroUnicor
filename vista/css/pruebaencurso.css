@@ -1,3 +1,6 @@
+.alerta{
+background-color: blue;
+}
 
 #cabecera{
   background:linear-gradient(30deg, #9493d3, rgba(188, 195, 231, 0.733) ,rgb(233, 234, 247), rgb(155, 154, 224));

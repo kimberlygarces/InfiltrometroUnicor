@@ -17,7 +17,8 @@
       
       header("Location: ../inicio.php");
     } else {
-      $message = 'No registrado!';
+      // echo"<script type=\"text/javascript\">alert('Usuario Incorrecto'); window.location='inicio.php';</script>"; 
+
     }
   }
 ?>
