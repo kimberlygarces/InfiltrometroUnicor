@@ -1,14 +1,35 @@
 
-.detalle{
+.botonesdoc{
     margin: 1px;
     cursor: pointer;
     outline: none;
     border-style: solid;
-    border-radius: 15px;
+    border-radius: 5px;
     border-color: #9493d3;
-    padding: 30px;
+    padding: 3px;
     margin: 1px;
   
+}
+
+.btnregistro{
+padding-right: 5%;
+padding-left: 10%;
+}
+
+.detalle:hover{
+  padding:2px;
+  margin: 5px;
+  background-color: rgba(163, 154, 212, 0.233);
+}
+.detalle{
+  padding:2px;
+  margin: 5px;
+  background-color: rgba(163, 154, 212, 0.39);
+}
+
+p{
+  font-weight: bold;
+  font-size: 15;
 }
 
 #cabecera{
@@ -59,8 +80,9 @@
   .input-group{
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
-    margin-left: 25px;
-    margin-top: 20px;
+    margin-left: 5%;
+margin-right: 5%;
+    margin-top: 10px;
   }
   .table2{
     cursor: pointer;
@@ -95,6 +117,8 @@
   #myBtn, #myBtn2{
     background:linear-gradient(30deg, #918feb, rgb(158, 168, 216) ,rgb(187, 190, 223), rgb(253, 255, 255));
     color: black;
+    width: 110%;
+    height: 110%;
   
   }
 

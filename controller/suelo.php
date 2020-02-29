@@ -8,6 +8,6 @@
 		mysqli_query($conexion, $sql2) or die("ERROR: ".mysqli_error($conexion));	
 
         
-        header("Location: ../localizacionsuelo.php");
+        header("Location: ../suelo.php");
 		
 ?>

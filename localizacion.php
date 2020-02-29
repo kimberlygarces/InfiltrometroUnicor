@@ -22,7 +22,7 @@ require 'controller/conexion2.php';
 
   <div class="row">
  
-  <div  class="col-sm-3" id="adi">
+  <div  class="col-sm-6" id="adi">
   <form action="controller/localizacion.php" method="post" class="form-group">
 
   <h4><i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -50,29 +50,7 @@ require 'controller/conexion2.php';
        
      
 </div>
-<div  class="col-sm-3" id="adi">
 
-<form action="controller/suelo.php" method="post" class="form-group">
-
-<h4><i class="fa fa-pagelines" aria-hidden="true"></i>
- Suelo</h4>
-
-<!-- <div id="more2"> -->
-      <input class="form-control" type="text" name="TipoSuelo"  placeholder="Tipo de Suelo" >
-
-     <br>
-     <input class="form-control" type="text" name="Observaciones2"  placeholder="Observaciones" >
-     <br>
-
-
-    <button  class="btn btn-success"  id="myBtn2">
-    <i class="fa fa-database" aria-hidden="true"></i>
-    Registrar Suelo</button>  
-    <br>
-
-</from>
-
-</div>
 <div class="col-sm-6 col-lg-5">
               <br>
               
@@ -127,56 +105,4 @@ require 'controller/conexion2.php';
         });
         </script>
 
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-  var btnText2 = document.getElementById("myBtn2");
-  var btndatos = document.getElementById("datos");
-
-
-
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Localización"; 
-    moreText.style.display = "none";
-    btnText2.style.display = "inline";
-
-    
-
-  } else {
-    dots.style.display = "none";
-    btnText2.style.display = "none";
-    btnText.innerHTML = "cerrar"; 
-    moreText.style.display = "inline";
-
-  }
-
-}
-  function myFunction2() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more2");
-  var btnText = document.getElementById("myBtn2");
-  var btnText2 = document.getElementById("myBtn");
-
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Tipo de suelo"; 
-    moreText.style.display = "none";
-    btnText2.style.display = "inline";
-
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "cerrar"; 
-    moreText.style.display = "inline";
-    btnText2.style.display = "none";
-
-  }
-
-  
-}
-</script>
 </html>

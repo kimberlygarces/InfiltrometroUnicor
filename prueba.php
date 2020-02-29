@@ -21,6 +21,7 @@ echo '<h6 id="dots">'.
             $idprueba.
             '</h6>'
  ?>
+
 </div>
 <!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
 <div  class="col-sm-9">
@@ -31,28 +32,131 @@ echo '<h6 id="dots">'.
 <div class="row"> 
  <div  class="col-sm-3" id="adi">
 <!-- VER DATOS ADICIONALES DE LA PRUEBA -->
-    <div class="detalle">
+    <div>
 
     <?php
+
+    // datos de la adicionales ya registrados
             $sql2 = "SELECT * FROM prueba WHERE Id = '" . $_GET["Id"] . "'";
             //3.ejecutar la consulta
-            $resultado2 = $conn->query($sql2);
-            echo '<tr><td colspan="5"></td></tr>';
+            $resultado2 = $conn->query($sql2) or die ("Algo ha ido mal en la consulta a la base de datos");
             $i = 0;
+            if(mysqli_num_rows($resultado2)>0){
+
             while ($registro2 = $resultado2->fetch_assoc()) {
-
-              echo '<h4>'. "<i class='fa fa-map-marker' aria-hidden='true'></i>  " . $registro2["localizacion"] . '</h4>';
-              echo '<h4>' . $registro2["suelo"] . '</h4>';
-              echo '<h4>' . $registro2["Observaciones"] . '</h4>';
-            
+              echo "<div class='detalle'>";
+              echo "<p>"."<i class='fa fa-map-marker' aria-hidden='true'></i> " . "LOCALIZACIÓN:" ."</p>";
+              echo '<p>'. $registro2["localizacion"] . '</p>';
+              echo "</div>";
+              echo "<div class='detalle'>";
+              echo "<p>"."<i class='fa fa-pagelines' aria-hidden='true'></i> " . "TIPO DE SUELO:" ."</p>";
+              echo '<p>'. $registro2["suelo"] . '</p>';
+              echo "</div>";
+              echo "<div class='detalle'>";
+              echo "<p>"."<i class='fa fa-eye' aria-hidden='true'></i> " . "OBSERVACIONES:" ."</p>";
+              echo '<p>' . $registro2["Observaciones"] . '</p>';
+              echo "</div>";
           }
-          ?>
 
+        }else{
+          // registro de los datos adicionales de la prueba en caso de no estar registrada
+          echo "<form action='controller/pruebatotal.php' method='post' class='form-group'>";
+          // codigo de la prueba oculto
+           echo "<input type='hidden' name='Id' value='$idprueba' >";
+            // seleccion de los la localización ya registradas
+          echo "<div class='row'>";
+          echo "<div  class='col-sm-10'>";
+      
+          echo "<div class='form-group'>";
+           echo "<select class='form-control' id='exampleFormControlSelect1' name='Ciudad' >";
+           echo "<option value='0' selected>" ."Elija una Ciudad". "</option>";
+
+         
+        $sql = "SELECT * FROM localizacion " ;
+        $resultado = $conn->query($sql);
+        if(empty($resultado)){
+        }
+        else{
+          $i=0;
+        while($registro = mysqli_fetch_array($resultado)){
+          
+           echo '<option value="'.$registro['ciudad'].'">'.$registro['ciudad'].'</option>';
+        }
+      }
+    
+        echo "</select>";
+          echo "</div>";
+          echo "</div>";
+          echo "<div  class='col-sm-1'>";
+          echo "<a data-toggle='tooltip' title='Ingresa una nueva localidad' href=localizacion.php>"."
+      <i class='fa fa-plus-circle fa-2x' aria-hidden='true'></i>"."</a>";
+
+          echo "</div>";
+          echo "</div>";
+
+          // ingresar el tipo de suelo de la prueba 
+          echo "<div class='row'>";
+          echo "<div  class='col-sm-10'>";
+          echo "<div class='form-group'>";
+          echo "<select class='form-control' id='exampleFormControlSelect1' name='TipoSuelo' >";
+          echo "<option value='0' selected>" ."Elija el tipo de suelo". "</option>";
+
+        
+          $sql = "SELECT * FROM suelo" ;
+          $resultado = $conn->query($sql);
+          if(empty($resultado)){
+          }
+          else{
+            $i=0;
+          while($registro = mysqli_fetch_array($resultado)){
+            
+             echo '<option value="'.$registro['TipoSuelo'].'">'.$registro['TipoSuelo'].'</option>';
+       }
+     }
+   
+       echo "</select>";
+         echo "</div>";
+         echo "</div>";
+         echo "<div  class='col-sm-1'>";
+         echo "<a  data-toggle='tooltip' title='Ingresa un nuevo tipo de suelo' href=suelo.php>"."
+         <i class='fa fa-plus-circle fa-2x' aria-hidden='true'></i>"."</a>";
+            echo "</div>";
+         echo "</div>";
+
+        //  INGRESAR LAS OBSERVACIONES DE LA PRUEBA
+         echo "<div class='form-group'>";
+        echo "<textarea class='form-control' name='Observaciones' id='exampleFormControlTextarea1' rows='3' placeholder='Observaciones generales de la prueba en curso'>";
+        echo"</textarea>";
+       echo"</div>";  
+
+       // BOTON DE GUARDAR DATOS DE LA PRUEBA
+       echo "<div class='btnregistro'>";
+       echo "<div class='row'>";
+       echo "<div  class='col-sm-10'>";
+       echo "<button  class='btn btn-primary'  id='myBtn2'>
+            <i class='fa fa-database' aria-hidden='true'></i>
+            Registrar datos </button>";  
+       echo"</div>"; 
+
+      // INGRESAR LOCALIZACIÓN Y SUELO A LA BD GENERAL
+
+       echo "<div  class='col-sm-2'>";
+        // echo "<i data-toggle='tooltip' title='Ingresa una nueva localidad o tipo de suelo' class='fa fa-map-marker fa-3x' aria-hidden='true'></i>";
+       echo"</div>";  
+              echo"</div>";  
+              echo"</div>";  
+
+               echo "</from>";
+
+        }
+
+          ?>
+ 
 
     </div>
     <br>
     <!-- BOTONES PARA DESCARGAR PDF, ECXEL Y GRAFICA -->
-    <div class="detalle">
+    <div class="botonesdoc">
       <a href="controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
     <button id="btonDoc" type="button" class="btn btn-danger">
       <i data-toggle="tooltip" title="Generar documento PDF"class="fa fa-file-pdf-o fa-2x"> </i>

@@ -7,6 +7,6 @@
 		//3.ejecutar la consulta
 		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
         
-        header("Location: ../pruebaencurso.php");
+        header("Location: ../inicio.php");
 		
 ?>
