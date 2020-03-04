@@ -116,6 +116,7 @@
       scanner.stop();
     }
 
+
     function activarCamara() {
       scanner.addListener('scan', function(content) {
         console.log(content);
