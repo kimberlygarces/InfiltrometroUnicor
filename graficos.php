@@ -32,8 +32,9 @@ $sql = "SELECT * FROM historialdatos WHERE Id_Prueba = '" . $_GET["Id"] . "'";
 $resultado = $conn->query($sql);
 while ($registro = $resultado->fetch_assoc()) {
 
-    $valorX[]=$registro["distancia"];
+    $valorX[]=$registro["N_Dato"];
     $valorY[]=$registro["tiempo"];
+    $valorY2[]=$registro["distancia"];
 
 
 
@@ -41,15 +42,19 @@ while ($registro = $resultado->fetch_assoc()) {
 
 $datosY=json_encode($valorX, JSON_NUMERIC_CHECK);
 $datosX=json_encode($valorY, JSON_NUMERIC_CHECK);
+$datosY2=json_encode($valorY2, JSON_NUMERIC_CHECK);
+
+
 
 
 
 ?>  
 
 <div class="container">
+<?php echo  "N° Datos","$datosY" ?>
 
  <?php echo "tiempo","$datosX" ?>
- <?php echo  "distancia","$datosY" ?>
+ <?php echo "distancia","$datosY2" ?>
 
 
 
@@ -76,6 +81,8 @@ $datosX=json_encode($valorY, JSON_NUMERIC_CHECK);
 
     X= <?php echo $datosY ?>;
     Y=<?php echo $datosX ?>;
+    Y2= <?php echo $datosY2 ?>;
+
 
                 var trace1 = {
             x: X,
@@ -83,9 +90,14 @@ $datosX=json_encode($valorY, JSON_NUMERIC_CHECK);
             type: 'scatter'
             };
 
-       
+            var trace2 = {
+            x: X,
+            y2: Y2,
+            type: 'scatter'
+            };
 
-            var data = [trace1];
+
+            var data = [trace1, trace2];
 
             Plotly.newPlot('myDiv', data);
 
