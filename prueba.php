@@ -165,7 +165,7 @@ echo '<h6 id="dots">'.
     <button id="btonDoc" type="button" class="btn btn-success">
     <i data-toggle="tooltip" title="Generar archivo ecxel"class="fa fa-file-excel-o fa-2x" ></i>
       </button></a>
-      <a href=" controller/printPDF.php?prueba=<?php echo $_GET['Id']; ?>" target="_blank">
+      <a href="graficos.php?Id=<?php echo $_GET['Id']; ?>" target="_blank">
     <button id="btonDoc" type="button" class="btn btn-warning">
     <i data-toggle="tooltip" title="Generar grafica de datos" class="fa fa-line-chart fa-2x" ></i>
       </button></a>
