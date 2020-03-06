@@ -81,6 +81,7 @@ require 'controller/conexion2.php';
           });
         });
         </script>
+        
 
         <!-- Bootstrap core JavaScript -->
         <script src="vendor/jquery/jquery.min.js"></script>
