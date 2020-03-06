@@ -40,7 +40,6 @@ if (!isset($_SESSION['usuario'])) {
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
           echo "<div id='btncurso' class='encurso'>";
-
           echo"<p>".'Existe prueba en curso'."</p>";
           echo '<button  id="iniciobtn" onclick="location="pruebaencurso.phpp"" class="btn btn-default">';
            echo"<button id='dots' onclick=location='pruebaencurso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 

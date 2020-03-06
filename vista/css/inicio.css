@@ -77,7 +77,7 @@
   }
 
   p{
-    font-size: 20px;
+    font-size: 18px;
     font-family:  Arial, Helvetica, sans-serif;
 
   }
@@ -107,20 +107,21 @@
       background:linear-gradient(30deg, #9493d3, rgb(187, 193, 224) ,rgb(134, 138, 199), rgb(178, 177, 226));
       /* background-image: url(img/cultivo.jpeg); */
       /* background:linear-gradient(30deg, rgb(116, 225, 65) ,#e3fc07, rgb(116, 225, 65), rgb(206, 243, 201), #e3fc07); */
-      margin: 30px;
+      margin:20px;
       height: 120px; 
-      width: 270px;
+      width: 320px;
       text-align: center;
       color:#040404;
       box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
       font-family:  Arial, Helvetica, sans-serif;
-      font-size: 20;
+      font-size: 15;
       font-weight: 900;
     }
     .encurso .btn{
       font-family:  Arial, Helvetica, sans-serif;
       font-weight: 900;
       padding: 0%;
+      font-size: 12px;
     }
     .titulo{
       padding: 9px;
