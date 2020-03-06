@@ -107,6 +107,7 @@ if (!isset($_SESSION['usuario'])) {
 
         echo "<h1>","Bienvenido","</h1>";
         echo "<br>";
+        
         echo "<p>","Desde Inficor podras visializar los datos capturados por tu dispositivo en tiempo real, desde cualquier parte del mundo.","</p>";
         echo "<p>","Además podras ver el historial de pruebas generadas y analizar el grafico respectivo de los datos.","</p>";
         echo "<p>","<b>","Es hora de preparar tu primera prueba de infiltración del agua en el suelo ","<i>"," Suerte!!","</i>","<b>","</p>";
