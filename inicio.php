@@ -22,23 +22,25 @@ if (!isset($_SESSION['usuario'])) {
 <div class="inicio">
       <div class="row">
        <div class="col-sm-5 .bg-white">
-       <div class="col-sm-10 .bg-white">
-
+       <div class="animated bounceInLeft delay-20s col-sm-10 .bg-white">
        <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> 
        <?php echo '<p>'."  ".$user. '</p>';?></p>
         </div>
        <br>
-        <div id="btncurso" class="encurso">
         <div>
        <?php
          
          $sql = "SELECT * FROM datosprueba where N_Dato=1" ;
          $resultado = $conn->query($sql);
+         if(mysqli_num_rows($resultado)>0){
+
          if(empty($resultado)){
          }
          else{
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
+          echo "<div id='btncurso' class='encurso'>";
+
           echo"<p>".'Existe prueba en curso'."</p>";
           echo '<button  id="iniciobtn" onclick="location="pruebaencurso.phpp"" class="btn btn-default">';
            echo"<button id='dots' onclick=location='pruebaencurso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
@@ -46,43 +48,42 @@ if (!isset($_SESSION['usuario'])) {
           $registro["Id_Prueba"].
           "<i class='fa fa-spinner fa-spin fa-2x fa-fw'  ></i>".
            "</button>";         
+           echo "</div>";
          }
        }
-
-      //  if(empty($resultado =="")){
-
-      //   echo"<p>".'En estos momentos no hay prueba en curso'."</p>";
-      //  }
-
+      }else{
+        // echo "<h1>","En estos momentos no hay prueba en curso","</h1>";
+      }
        ?>
        </div>
-       </div>
+
       </div>
-      <br></br>
-      <br></br>
+    <br></br>
+    <br></br>
     <br></br>
     <br></br>
            <div class="col-sm-6" >
-           <div class="titulo">
-          <h1>Historial de pruebas</h1>
-          </div>
-         <div class="table-responsive">
-          <div class="table2" >
-          <table class="table  table-striped table-hover">     
-          <tbody id="myTable">
+
          <?php
-           //Conectarse al servidor mysql
-         $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
            
          $sql = "SELECT * FROM historialdatos where N_Dato=1" ;
            //EJECUTAR LA CONSULTA
-         $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
-         if(empty($resultado)){
+           $resultado = $conn->query($sql);
+           if(mysqli_num_rows($resultado)>0){
+
+           if(empty($resultado)){
            echo '<tr><td colspan="4"></td></tr>';
          }
          else{
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
+          echo "<div class='titulo'>";
+          echo "<h1>","Historial de pruebas","</h1>";
+         echo "</div>";
+          echo "<div class='table-responsive'>";
+          echo "<div class='table2' >";
+          echo "<table class='table  table-striped table-hover'>";     
+          echo "<tbody id='myTable'>";
             echo '<tr>';
              echo '<td>';
             echo"<button onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
@@ -93,15 +94,29 @@ if (!isset($_SESSION['usuario'])) {
              echo '<td>';
              echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' ></i>";
              echo '</td>';
-             echo '</tr>';     
+             echo '</tr>';   
+            echo "</tbody>";
+            echo "</table>";
+            echo "</div>";
+            echo "</div>  ";
          }
        }
-       mysqli_close($conexion);
+      }else{
+
+        echo "<div class='vacio'>";
+        echo "<img src='img/infiltrometro.jpg' alt='' width='100%' height='500'>";
+
+        echo "<div class='row'>";
+        echo "<div class='col-sm-6'>";
+
+        echo "</div>"; 
+        echo "</div>";
+        echo " </div>";
+
+
+      }
        ?>
-        </tbody>
-        </table>
-        </div>
-      </div>
+      
 
         </div>
         </div>

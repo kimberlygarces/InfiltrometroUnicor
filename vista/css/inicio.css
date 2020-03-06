@@ -6,10 +6,10 @@
     animation-fill-mode: both;
   }
 
-  .animated:hover {
+  /* .animated:hover {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-  }
+  } */
   
 
   
@@ -52,7 +52,7 @@
       .table2{
       cursor: pointer;
       overflow:scroll;
-      height:450px;
+      height:500px;
       border-radius: 5px;
     }
 
@@ -62,12 +62,24 @@
       background-color: rgb(227, 228, 238);
     }
   
-  
+  .vacio{
+    height:500px;
+    margin-top: 35px;
+    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
+    background-color: rgb(227, 228, 238);
+    padding: 5px;
+
+  }
+
+  img {
+    border-radius: 5px;
+  }
     .inicio .col-sm-10{
       
-      border-radius: 0px 0px 20px 0px;
+      border-radius: 0px 50px 50px 0px;
       color:#dac9c9;
-      
       font: italic bold 20px Georgia, Serif;
       background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(107, 66, 66), rgb(139, 22, 22)) ;
       height: 65px;
@@ -97,6 +109,7 @@
       color:#040404;
       box-shadow: -9px -4px 5px 0px rgba(0,0,0,0.75);
       font-family:  Arial, Helvetica, sans-serif;
+      font-size: 20;
       font-weight: 900;
     }
     .encurso .btn{
@@ -114,6 +127,9 @@
         background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(157, 149, 228));
 
     }
+
+
+    
   
 
     
