@@ -1,4 +1,7 @@
-<?php require 'vista/nav.php' ?>
+<?php require 'vista/nav.php';
+require 'controller/conexion2.php';
+
+?>
       <link rel="stylesheet" type="text/css" href="vista/css/historial.css">
 
       <div class="titulo">
@@ -20,18 +23,17 @@
           <table class="table  table-striped table-hover">       
           <tbody id="myTable">
          <?php
-           //Conectarse al servidor mysql
-         $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
-           
          $sql = "SELECT * FROM historialdatos where N_Dato=1" ;
-           //EJECUTAR LA CONSULTA
-         $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
+         //EJECUTAR LA CONSULTA
+         $resultado = $conn->query($sql);
+         if(mysqli_num_rows($resultado)>0){
+
          if(empty($resultado)){
-           echo '<tr><td colspan="4"></td></tr>';
-         }
-         else{
-           $i=0;
-         while($registro = mysqli_fetch_array($resultado)){
+         echo '<tr><td colspan="4"></td></tr>';
+       }
+       else{
+         $i=0;
+       while($registro = mysqli_fetch_array($resultado)){
             echo '<tr>';
              echo '<td>';
             echo"<button onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
@@ -48,7 +50,11 @@
              echo '</tr>';     
          }
        }
-       mysqli_close($conexion);
+      }else{
+        echo"<script type=\"text/javascript\">alert('Aun no existen pruebas registradas'); window.location='inicio.php';</script>"; 
+
+      
+      }
        ?>
         </tbody>
         </table>

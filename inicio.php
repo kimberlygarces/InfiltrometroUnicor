@@ -22,7 +22,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="inicio">
       <div class="row">
        <div class="col-sm-5 .bg-white">
-       <div class="animated bounceInLeft delay-20s col-sm-10 .bg-white">
+       <div class="animated bounceInLeft delay-20s col-lg-10 col-sm-10 .bg-white">
        <p><img class="animated fadeIn" src="img/user.png" width="50" height="50" align="left"> 
        <?php echo '<p>'."  ".$user. '</p>';?></p>
         </div>
@@ -104,13 +104,13 @@ if (!isset($_SESSION['usuario'])) {
       }else{
 
         echo "<div class='vacio'>";
-        echo "<img src='img/infiltrometro.jpg' alt='' width='100%' height='500'>";
 
-        echo "<div class='row'>";
-        echo "<div class='col-sm-6'>";
+        echo "<h1>","Bienvenido","</h1>";
+        echo "<br>";
+        echo "<p>","Desde Inficor podras visializar los datos capturados por tu dispositivo en tiempo real, desde cualquier parte del mundo.","</p>";
+        echo "<p>","Además podras ver el historial de pruebas generadas y analizar el grafico respectivo de los datos.","</p>";
+        echo "<p>","<b>","Es hora de preparar tu primera prueba de infiltración del agua en el suelo ","<i>"," Suerte!!","</i>","<b>","</p>";
 
-        echo "</div>"; 
-        echo "</div>";
         echo " </div>";
 
 
