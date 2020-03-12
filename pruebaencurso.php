@@ -133,48 +133,47 @@ require 'controller/conexion2.php';
 <!--::::::::::::::::::::::::::::::::::::::::::::::::. TABLA CON LOS DATOS EN CURSO:::::::::::::::::::::::::::::::::::::::::::::: -->
 <div class="col-sm-9">
        <br>
-       <section>
-         <div class="table2" >
-            <div class="table-responsive text-center">
-            <table class="table  table-striped table-hover" id="tablajson">
-            <thead>
-            <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
-            <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
-            <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
-          			
-                
-            </thead>
-            <tbody></tbody>
-            </table>
-      
-            <script type="text/javascript">
-      
-            $(document).ready(function(){
-            var url="controller/datos.php";
-            $("#tablajson tbody").html("");
-            $.getJSON(url,function(prueba){
-            $.each(prueba, function(i,prueba){
-            var newRow =
-            "<tr>"
-            +"<td>"+prueba.N_Dato+"</td>"
-            // +"<td>"+prueba.Id_Dispositivo+"</td>"
-            // +"<td>"+prueba.Id_Prueba+"</td>"
-            +"<td>"+prueba.distancia+"</td>"
-            +"<td>"+prueba.tiempo+"</td>"
-          
-            +"</tr>";
-            $(newRow).appendTo("#tablajson tbody");
-            });
-            });
-            });
-      
-            </script>
-              </section>   
-     </div>
-        </div>
-          </div>
-             </div>
-              </div>
+       <div class="table-responsive text-center">
+       <table class="table  table-striped table-hover" id="datos">
+        <thead>
+        <tr>
+        <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
+        <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
+        <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
+        <th>  </th>
+
+        </tr>
+        </table>
+    </thead>
+        <div class="table2 text-center">
+        <table class="table  table-striped table-hover">
+
+    <tbody id="tbody">
+<?php
+
+$sql = "SELECT * FROM datosprueba";
+$resultado = $conn->query($sql);
+  $ia = 0;
+  while ($registro = $resultado->fetch_assoc()) {
+    echo '<tr>';
+    echo '<td data-toggle="tooltip" title="Número de dato">' . $registro["N_Dato"] . '</td>';
+    echo '<td data-toggle="tooltip" title="Tiempo acumulado">' . $registro["tiempo"] . '</td>';
+    echo '<td data-toggle="tooltip" title="Lectura en escala">' . $registro["distancia"] . '</td>';
+    echo '</tr>';
+
+  }
+?>
+
+
+
+ </tbody>
+  </table>
+  </div>
+  </div>
+      </div>
+  </div>
+  
+      </div>
   <footer class="page-footer font-small unique-color-dark pt-4">
 
           <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
