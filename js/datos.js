@@ -1,26 +1,20 @@
 // FUNCION PARA MOSTRAR LOS DATOS JSON EN LA TABLA 
-$(function(){
-    tabla();
-});
+// $(document).ready(function(){
+//     var url="controller/datos.php";
+//     $("#datos tbody").html("");
+//     $.getJSON(url,function(datosprueba){
+//     $.each(datosprueba, function(i,datosprueba){
+//     var newRow =
 
-function tabla(){
-   $.ajax({
-      url: 'controller/datos.php',
-      type: 'POST',
-      success: function(res){
-        var js= JSON.parse(res);
-        var tabla;
-        
-    for (var i = 0; i < js.length; i++){
-        tabla+='<tr><td>'+js[i].N_Dato+
-                //'</td><td>'+js[i].Id_Prueba+
-                '</td><td>'+js[i].tiempo+
-                '</td><td>'+js[i].distancia+'</td></tr>';
-    }
-    $('#tbody').html(tabla);
-    
-    }
-});
-}
+//     "<tr>"
+// +"<td>"+datosprueba.N_Dato+"</td>"
+// +"<td>"+datosprueba.tiempo+"</td>"
+// +"<td>"+datosprueba.distancia+"</td>"
+// +"</tr>";
+// $(newRow).appendTo("#datos tbody");
+// });
+// });
+// });
+
 
 

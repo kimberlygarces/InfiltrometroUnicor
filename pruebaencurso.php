@@ -20,7 +20,7 @@ require 'controller/conexion2.php';
 
               while($registro = mysqli_fetch_array($resultado)){
                   echo '<h6 id="dots">' .
-                  "  <img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
+                  "  <img src='img/prueba.png' width='30' height='30' class='animated tada delay-20s'/>  ".
                     $registro["Id_Prueba"].
                   '</h6>';
                   $idprueba=$registro["Id_Prueba"];
@@ -78,7 +78,7 @@ require 'controller/conexion2.php';
           </div>
       </div>
       <div  class="col-sm-2">
-      <a class="" href=localizacionsuelo.php>
+      <a class="" href=localizacion.php>
       <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
 
       </div>
@@ -108,7 +108,7 @@ require 'controller/conexion2.php';
         </div>
       </div>
       <div  class="col-sm-2">
-      <a class="" href=localizacionsuelo.php>
+      <a class="" href=suelo.php>
       <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
 
       </div>
@@ -133,45 +133,48 @@ require 'controller/conexion2.php';
 <!--::::::::::::::::::::::::::::::::::::::::::::::::. TABLA CON LOS DATOS EN CURSO:::::::::::::::::::::::::::::::::::::::::::::: -->
 <div class="col-sm-9">
        <br>
-       <div class="table-responsive text-center">
-       <table class="table  table-striped table-hover" id="datos">
-        <thead>
-        <tr>
-        <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
-        <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
-        <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
-        <th>  </th>
-
-        </tr>
-        </table>
-    </thead>
-        <div class="table2 text-center">
-        <table class="table  table-striped table-hover">
-
-    <tbody id="tbody">
-<?php
-
-// $sql = "SELECT * FROM datosprueba";
-// $resultado = $conn->query($sql);
-//   $ia = 0;
-//   while ($registro = $resultado->fetch_assoc()) {
-//     echo '<tr>';
-//     echo '<td data-toggle="tooltip" title="Número de dato">' . $registro["N_Dato"] . '</td>';
-//     echo '<td data-toggle="tooltip" title="Tiempo acumulado">' . $registro["tiempo"] . '</td>';
-//     echo '<td data-toggle="tooltip" title="Lectura en escala">' . $registro["distancia"] . '</td>';
-//     echo '</tr>';
-
-//   }
-?>
-
- </tbody>
-  </table>
-  </div>
-  </div>
-      </div>
-  </div>
-  
-      </div>
+       <section>
+         <div class="table2" >
+            <div class="table-responsive text-center">
+            <table class="table  table-striped table-hover" id="tablajson">
+            <thead>
+            <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
+            <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
+            <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
+          			
+                
+            </thead>
+            <tbody></tbody>
+            </table>
+      
+            <script type="text/javascript">
+      
+            $(document).ready(function(){
+            var url="controller/datos.php";
+            $("#tablajson tbody").html("");
+            $.getJSON(url,function(prueba){
+            $.each(prueba, function(i,prueba){
+            var newRow =
+            "<tr>"
+            +"<td>"+prueba.N_Dato+"</td>"
+            // +"<td>"+prueba.Id_Dispositivo+"</td>"
+            // +"<td>"+prueba.Id_Prueba+"</td>"
+            +"<td>"+prueba.distancia+"</td>"
+            +"<td>"+prueba.tiempo+"</td>"
+          
+            +"</tr>";
+            $(newRow).appendTo("#tablajson tbody");
+            });
+            });
+            });
+      
+            </script>
+              </section>   
+     </div>
+        </div>
+          </div>
+             </div>
+              </div>
   <footer class="page-footer font-small unique-color-dark pt-4">
 
           <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
@@ -200,57 +203,4 @@ require 'controller/conexion2.php';
           $('[data-toggle="tooltip"]').tooltip();   
         });
         </script>
-
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-  var btnText2 = document.getElementById("myBtn2");
-  var btndatos = document.getElementById("datos");
-
-
-
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Localización"; 
-    moreText.style.display = "none";
-    btnText2.style.display = "inline";
-
-    
-
-  } else {
-    dots.style.display = "none";
-    btnText2.style.display = "none";
-    btnText.innerHTML = "cerrar"; 
-    moreText.style.display = "inline";
-
-  }
-
-}
-  function myFunction2() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more2");
-  var btnText = document.getElementById("myBtn2");
-  var btnText2 = document.getElementById("myBtn");
-
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Tipo de suelo"; 
-    moreText.style.display = "none";
-    btnText2.style.display = "inline";
-
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "cerrar"; 
-    moreText.style.display = "inline";
-    btnText2.style.display = "none";
-
-  }
-
-  
-}
-</script>
 </html>
