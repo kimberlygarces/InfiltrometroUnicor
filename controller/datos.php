@@ -1,9 +1,9 @@
 <?php
 			//Conectarse al servidor mysql
-		$conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR: ".mysqli_error($conexion));
-		  
+      $conexion = mysqli_connect("localhost", "root", "") or die("ERROR: ".mysqli_error());
+      mysqli_select_db($conexion,"infiltrometro") or die("Error conectandose a la BD ");
+      		  
 		$sql = "SELECT * FROM datosprueba";
-      //EJECUTAR LA CONSULTA
     $resultado = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
 
     while ($dat=mysqli_fetch_assoc($resultado)){
@@ -13,7 +13,17 @@
 
   echo json_encode($arr);
 
+//   require 'controller/conexion2.php';
 
+//   $sql = "SELECT * FROM datosprueba";
+//   $resultado = $conn->query($sql);
+//     $ia = 0;
+//     while ($registro = $resultado->fetch_assoc()) {
+// $registro[""];
+
+  
+//     }
+//     echo json_encode($registro);
 
 
 ?>

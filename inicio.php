@@ -39,7 +39,7 @@ if (!isset($_SESSION['usuario'])) {
          else{
            $i=0;
          while($registro = mysqli_fetch_array($resultado)){
-          echo "<div id='btncurso' class='encurso'>";
+          echo "<div class='encurso ' id='btncurso' class=''>";
           echo"<p>".'Existe prueba en curso'."</p>";
           echo '<button  id="iniciobtn" onclick="location="pruebaencurso.phpp"" class="btn btn-default">';
            echo"<button id='dots' onclick=location='pruebaencurso.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
@@ -62,27 +62,26 @@ if (!isset($_SESSION['usuario'])) {
     <br></br>
     <br></br>
            <div class="col-sm-6" >
-
-         <?php
-           
+           <?php
+               echo "<div class='titulo'>";
+               echo "<h1>","Historial de pruebas","</h1>";
+              echo "</div>";
+               echo "<div class='table-responsive'>";
+               echo "<div class='table2' >";
+               echo "<table class='table  table-striped table-hover'>";     
+               echo "<tbody id='myTable'>";
          $sql = "SELECT * FROM historialdatos where N_Dato=1" ;
-           //EJECUTAR LA CONSULTA
-           $resultado = $conn->query($sql);
-           if(mysqli_num_rows($resultado)>0){
+         //EJECUTAR LA CONSULTA
+         $resultado = $conn->query($sql);
+         if(mysqli_num_rows($resultado)>0){
 
-           if(empty($resultado)){
-           echo '<tr><td colspan="4"></td></tr>';
-         }
-         else{
-           $i=0;
-         while($registro = mysqli_fetch_array($resultado)){
-          echo "<div class='titulo'>";
-          echo "<h1>","Historial de pruebas","</h1>";
-         echo "</div>";
-          echo "<div class='table-responsive'>";
-          echo "<div class='table2' >";
-          echo "<table class='table  table-striped table-hover'>";     
-          echo "<tbody id='myTable'>";
+         if(empty($resultado)){
+         echo '<tr><td colspan="4"></td></tr>';
+       }
+       else{
+         $i=0;
+       while($registro = mysqli_fetch_array($resultado)){
+      
             echo '<tr>';
              echo '<td>';
             echo"<button onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' class='btn'>". 
@@ -94,12 +93,14 @@ if (!isset($_SESSION['usuario'])) {
              echo "<i class='fa fa-book fa-fw fa-2x' aria-hidden='true' align='left' onclick=location='prueba.php?Id=".$registro['Id_Prueba']."' ></i>";
              echo '</td>';
              echo '</tr>';   
-            echo "</tbody>";
-            echo "</table>";
-            echo "</div>";
-            echo "</div>  ";
+        
          }
        }
+
+       echo "</tbody>";
+       echo "</table>";
+       echo "</div>";
+       echo "</div>  ";
       }else{
 
         echo "<div class='vacio'>";
@@ -115,6 +116,8 @@ if (!isset($_SESSION['usuario'])) {
 
 
       }
+
+   
        ?>
       
 

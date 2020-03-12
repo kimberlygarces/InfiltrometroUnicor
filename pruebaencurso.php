@@ -50,9 +50,6 @@ require 'controller/conexion2.php';
   <div  class="col-sm-3" id="adi">
 
   <form action="controller/pruebatotal.php" method="post" class="form-group">
-  <h4><i class="fa fa-map-marker" aria-hidden="true"></i>
-    Localización</h4>
-
       <!-- <div id="more"> -->
         <div class="row">
         <div  class="col-sm-10">
@@ -87,8 +84,7 @@ require 'controller/conexion2.php';
       </div>
 
         </div>
-        <h4><i class="fa fa-pagelines" aria-hidden="true"></i>
-        Suelo</h4>
+      
         <div class="row">
         <div  class="col-sm-10">
         <div class="form-group">
@@ -153,8 +149,22 @@ require 'controller/conexion2.php';
         <table class="table  table-striped table-hover">
 
     <tbody id="tbody">
-          <!-- DATOS EN TIEMPO REAL-->
-    </tbody>
+<?php
+
+// $sql = "SELECT * FROM datosprueba";
+// $resultado = $conn->query($sql);
+//   $ia = 0;
+//   while ($registro = $resultado->fetch_assoc()) {
+//     echo '<tr>';
+//     echo '<td data-toggle="tooltip" title="Número de dato">' . $registro["N_Dato"] . '</td>';
+//     echo '<td data-toggle="tooltip" title="Tiempo acumulado">' . $registro["tiempo"] . '</td>';
+//     echo '<td data-toggle="tooltip" title="Lectura en escala">' . $registro["distancia"] . '</td>';
+//     echo '</tr>';
+
+//   }
+?>
+
+ </tbody>
   </table>
   </div>
   </div>
