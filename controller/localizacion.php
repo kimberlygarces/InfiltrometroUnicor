@@ -4,8 +4,8 @@
 
 		$sql = "INSERT INTO localizacion values (default,'".$_POST['Ciudad']."','".$_POST['Coordenadas']."','".$_POST['Observaciones']."')";
 		//3.ejecutar la consulta
-		$resultado = $conn->query($sql) or die ("Algo ha ido mal en la consulta a la base de datos");
-        
+		$conn->query($sql);
+		$conn->close();        
         header("Location: ../localizacion.php");
 		
 ?>
