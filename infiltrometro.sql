@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-02-2020 a las 23:43:17
+-- Tiempo de generación: 13-03-2020 a las 16:51:07
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -21,18 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `infiltrometro`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `admin`
---
-
-CREATE TABLE `admin` (
-  `id_admin` varchar(25) NOT NULL,
-  `nombre` varchar(50) NOT NULL,
-  `contrasena` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -71,7 +59,9 @@ CREATE TABLE `historialdatos` (
   `N_Dato` int(11) NOT NULL,
   `Id_Prueba` varchar(25) NOT NULL,
   `tiempo` int(11) NOT NULL,
-  `distancia` float NOT NULL
+  `distancia` float NOT NULL,
+  `suelo` int(11) DEFAULT NULL,
+  `localizacion` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -81,10 +71,23 @@ CREATE TABLE `historialdatos` (
 --
 
 CREATE TABLE `localizacion` (
-  `Id_Prueba` varchar(11) NOT NULL,
+  `Id_Prueba` int(11) NOT NULL,
   `ciudad` varchar(50) NOT NULL,
   `coordenadas` varchar(50) NOT NULL,
   `observaciones` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prueba`
+--
+
+CREATE TABLE `prueba` (
+  `Id` varchar(50) NOT NULL,
+  `localizacion` varchar(50) DEFAULT NULL,
+  `suelo` varchar(50) DEFAULT NULL,
+  `Observaciones` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -94,7 +97,7 @@ CREATE TABLE `localizacion` (
 --
 
 CREATE TABLE `suelo` (
-  `Id_Prueba` varchar(23) NOT NULL,
+  `Id_Prueba` int(23) NOT NULL,
   `TipoSuelo` varchar(50) NOT NULL,
   `Observaciones` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -108,9 +111,22 @@ CREATE TABLE `suelo` (
 CREATE TABLE `usuario` (
   `Id_Usuario` int(23) NOT NULL,
   `Nombre_Usuario` varchar(50) NOT NULL,
-  `Correo` varchar(50) NOT NULL,
-  `Contraseña` varchar(64) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `contrasena` varchar(64) NOT NULL,
   `Id_Dispositivo` varchar(14) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarioroot`
+--
+
+CREATE TABLE `usuarioroot` (
+  `id_admin` varchar(100) NOT NULL,
+  `contrasena` varchar(100) NOT NULL,
+  `nombre` varchar(100) DEFAULT NULL,
+  `privilegios` int(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -137,13 +153,21 @@ ALTER TABLE `dispositivo`
 --
 ALTER TABLE `historialdatos`
   ADD PRIMARY KEY (`Id`),
-  ADD KEY `Id_Prueba` (`Id_Prueba`);
+  ADD KEY `Id_Prueba` (`Id_Prueba`),
+  ADD KEY `suelo` (`suelo`),
+  ADD KEY `localizacion` (`localizacion`);
 
 --
 -- Indices de la tabla `localizacion`
 --
 ALTER TABLE `localizacion`
   ADD PRIMARY KEY (`Id_Prueba`);
+
+--
+-- Indices de la tabla `prueba`
+--
+ALTER TABLE `prueba`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indices de la tabla `suelo`
@@ -160,6 +184,12 @@ ALTER TABLE `usuario`
   ADD KEY `Id_Dispositivo_2` (`Id_Dispositivo`);
 
 --
+-- Indices de la tabla `usuarioroot`
+--
+ALTER TABLE `usuarioroot`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -173,7 +203,19 @@ ALTER TABLE `datosprueba`
 -- AUTO_INCREMENT de la tabla `historialdatos`
 --
 ALTER TABLE `historialdatos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `localizacion`
+--
+ALTER TABLE `localizacion`
+  MODIFY `Id_Prueba` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `suelo`
+--
+ALTER TABLE `suelo`
+  MODIFY `Id_Prueba` int(23) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -189,19 +231,9 @@ ALTER TABLE `datosprueba`
 -- Filtros para la tabla `historialdatos`
 --
 ALTER TABLE `historialdatos`
-  ADD CONSTRAINT `historialdatos_ibfk_1` FOREIGN KEY (`Id_Prueba`) REFERENCES `datosprueba` (`Id_Prueba`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `localizacion`
---
-ALTER TABLE `localizacion`
-  ADD CONSTRAINT `localizacion_ibfk_1` FOREIGN KEY (`Id_Prueba`) REFERENCES `datosprueba` (`Id_Prueba`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `suelo`
---
-ALTER TABLE `suelo`
-  ADD CONSTRAINT `suelo_ibfk_1` FOREIGN KEY (`Id_Prueba`) REFERENCES `datosprueba` (`Id_Prueba`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `historialdatos_ibfk_1` FOREIGN KEY (`Id_Prueba`) REFERENCES `datosprueba` (`Id_Prueba`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `historialdatos_ibfk_2` FOREIGN KEY (`suelo`) REFERENCES `suelo` (`Id_Prueba`),
+  ADD CONSTRAINT `historialdatos_ibfk_3` FOREIGN KEY (`localizacion`) REFERENCES `localizacion` (`Id_Prueba`);
 
 --
 -- Filtros para la tabla `usuario`
