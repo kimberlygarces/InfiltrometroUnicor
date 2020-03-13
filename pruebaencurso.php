@@ -164,7 +164,45 @@ $resultado = $conn->query($sql);
   }
 ?>
 
-
+<!-- PRUEBA -->
+<!-- 
+<section>
+         <div class="table2" >
+            <div class="table-responsive text-center">
+            <table class="table  table-striped table-hover" id="tablajson">
+            <thead>
+            <th data-toggle="tooltip" title="Número de dato">N° Dato</th>
+            <th data-toggle="tooltip" title="Tiempo acumulado"> Tiempo </th>
+            <th data-toggle="tooltip" title="Lectura en escala">   l Escala </th>
+          			
+                
+            </thead>
+            <tbody></tbody>
+            </table>
+      
+            <script type="text/javascript">
+      
+            $(document).ready(function(){
+            var url="controller/datos.php";
+            $("#tablajson tbody").html("");
+            $.getJSON(url,function(prueba){
+            $.each(prueba, function(i,prueba){
+            var newRow =
+            "<tr>"
+            +"<td>"+prueba.N_Dato+"</td>"
+            // +"<td>"+prueba.Id_Dispositivo+"</td>"
+            // +"<td>"+prueba.Id_Prueba+"</td>"
+            +"<td>"+prueba.distancia+"</td>"
+            +"<td>"+prueba.tiempo+"</td>"
+          
+            +"</tr>";
+            $(newRow).appendTo("#tablajson tbody");
+            });
+            });
+            });
+      
+            </script>
+              </section>    -->
 
  </tbody>
   </table>

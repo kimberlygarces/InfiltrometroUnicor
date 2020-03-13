@@ -1,11 +1,10 @@
 <?php
 //1.contectarse al servidor mysql
-		$conexion = mysqli_connect("localhost", "root", "") or die("ERROR: ".mysqli_error());
-		mysqli_select_db($conexion,"infiltrometro") or die("Error conectandose a la BD ");
+		require 'conexion2.php';
 
 		$sql = "INSERT INTO localizacion values (default,'".$_POST['Ciudad']."','".$_POST['Coordenadas']."','".$_POST['Observaciones']."')";
 		//3.ejecutar la consulta
-		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
+		$resultado = $conn->query($sql) or die ("Algo ha ido mal en la consulta a la base de datos");
         
         header("Location: ../localizacion.php");
 		
