@@ -18,9 +18,17 @@
 
 <body>
 
-  <div class="container-fluid text-center" id="containerone">
-  <img class="animated bounceInLeft delay-20s" src="img/user.png">
-  <h1>Registro</h1>
+  <div class="container-fluid text-center" >
+  <div class="row">
+        <div class="col-sm-3 animated bounceInLeft delay-20s" id="containerone" >
+            <img class="animated bounceInLeft delay-20s" src="img/user.png">
+            <h1>Registro de nuevo usuario</h1>
+            <p>Para el registro exitos del usuario debe tener el codigo del dispositivo </p>
+            <p>El codigo del dispositivo puede ser leido por codigo QR aderido en el dispositivo</p>
+        </div>
+        <div class="col-sm-9" id="containertwo">
+         <br>
+        
     <form action="controller/registroUser.php" method="post" class="form-group">
       <div class="row">
         <div class="col-sm-6">
@@ -90,6 +98,29 @@
         </div>
         <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
     </form>
+    <br>
+        </div>
+        <footer class="page-footer font-small unique-color-dark pt-4">
+
+<div class="container">
+
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Ya se encuentra registrado</h5>
+    </li>
+    <li class="list-inline-item">
+      <button onclick="location='index.php'" type="button" class="btn btn-outline-dark">Iniciar secion</button>
+    </li>
+  </ul>
+
+</div>
+
+<div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
+  <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+</div>
+
+</footer>
+        </div>
   </div>
   <script>
       let scanner = new Instascan.Scanner({
@@ -123,26 +154,7 @@
   </script>
 
 
-  <footer class="page-footer font-small unique-color-dark pt-4">
 
-    <div class="container">
-
-      <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-          <h5 class="mb-1">Ya se encuentra registrado</h5>
-        </li>
-        <li class="list-inline-item">
-          <button onclick="location='index.php'" type="button" class="btn btn-outline-dark">Iniciar secion</button>
-        </li>
-      </ul>
-
-    </div>
-
-    <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-      <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
-    </div>
-
-  </footer>
   <!-- Footer -->
 
 </body>

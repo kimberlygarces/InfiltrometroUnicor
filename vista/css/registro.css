@@ -1,4 +1,28 @@
+#containertwo{
+
+padding-top: 8%;
+padding-right: 50px;
+padding-left: 50px;
+}
+ h1{
+    color: rgb(233, 234, 247);
+    font-weight: 900;
+ }
+p{
+    color: rgb(233, 234, 247);
+ 
+}
+
+
 #containerone{
 
-padding-top: 90px;
+    padding-top: 90px;
+    background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(139, 67, 67), rgb(139, 22, 22)) ;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    }
+
+body{
+    background:linear-gradient(15deg, #c9c9d8,  #dfdfe7 , #afaee4,#e4e4eb);
+
 }
