@@ -9,15 +9,15 @@ require 'conexion2.php';
         class Data{
             private $con;
             public function __construct(){
-                $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR 2: ".mysqli_error($conexion));
+                $conexion = mysqli_connect($server, $username, $password, $database) or die("ERROR 2: ".mysqli_error($conexion));
             }
             public function getPrueba(){
     
                 $prueba = array();
-                $conexion = mysqli_connect("localhost","root","","infiltrometro") or die("ERROR 3: ".mysqli_error($conexion));
+                $conexion = mysqli_connect($server, $username, $password, $database) or die("ERROR 3: ".mysqli_error($conexion));
                 $sql = "SELECT * FROM datosprueba";
                 //EJECUTAR LA CONSULTA
-              $res = mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));
+              $res = mysqli_query($conexion, $sql) or die("ERROR 4: ".mysqli_error($conexion));
                 while($reg = mysqli_fetch_array($res)){
                     $p = new datosprueba();
                     $p->N_Dato = $reg[0];
