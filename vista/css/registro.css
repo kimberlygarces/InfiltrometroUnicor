@@ -1,9 +1,35 @@
 #containertwo{
 
-padding-top: 8%;
-padding-right: 50px;
-padding-left: 50px;
+padding-top: 5%;
+padding-right: 150px;
+padding-left: 150px;
+
 }
+
+.registro{
+    background-color: rgba(214, 214, 228, 0.61);
+    padding-right: 4%;
+    padding-left: 4%;
+    margin-bottom: 4%;
+    border-radius: 14px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+
+}
+
+footer{
+    background-color: rgba(216, 202, 202, 0.527);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 14px;
+    font-weight: 900;
+
+
+
+}
+h5{
+    font-weight: 800;
+}
+
  h1{
     color: rgb(233, 234, 247);
     font-weight: 900;
@@ -17,12 +43,16 @@ p{
 #containerone{
 
     padding-top: 90px;
-    background:linear-gradient(30deg, rgb(139, 22, 22) ,rgb(139, 67, 67), rgb(139, 22, 22)) ;
+    background:linear-gradient(30deg, rgba(172, 28, 28, 0.781) ,rgba(139, 67, 67, 0.911), rgba(139, 22, 22, 0.856)) ;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     
     }
 
 body{
-    background:linear-gradient(15deg, #c9c9d8,  #dfdfe7 , #afaee4,#e4e4eb);
-
+    /* background:linear-gradient(15deg, #c9c9d8,  #dfdfe7 , #afaee4,#e4e4eb); */
+    background-image: url(../../img/cultivo.jpeg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

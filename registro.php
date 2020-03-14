@@ -28,8 +28,8 @@
         </div>
         <div class="col-sm-9" id="containertwo">
          <br>
-        
-    <form action="controller/registroUser.php" method="post" class="form-group">
+        <div class="registro">
+      <form action="controller/registroUser.php" method="post" class="form-group">
       <div class="row">
         <div class="col-sm-6">
           <br>
@@ -98,6 +98,8 @@
         </div>
         <button class="btn btn-lg btn-secondary btn-block" type="submit">Registrar Usuario</button>
     </form>
+    </div>
+
     <br>
         </div>
         <footer class="page-footer font-small unique-color-dark pt-4">
@@ -115,8 +117,8 @@
 
 </div>
 
-<div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-  <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+<div class="footer-copyright text-center py-3">© 2020: Ingenieria de Sistemas Universidad de Córdoba
+  <a href="http://104.197.33.56/infiltrometrounicor/"> InfiltrometroUnicor</a>
 </div>
 
 </footer>
