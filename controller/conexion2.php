@@ -18,7 +18,6 @@
     $username = 'root';
     $password = '';
     $database = 'infiltrometro';
-    
     $conn = new mysqli($server, $username, $password, $database);
 // }
 
