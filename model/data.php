@@ -21,6 +21,7 @@ require 'conexion2.php';
                 while($reg = mysqli_fetch_array($res)){
                     $p = new datosprueba();
                     $p->N_Dato = $reg[0];
+                
                     $p->Id_dispocitivo = $reg[1];
                     $p->Id_Prueba = $reg[2];
                     $p->tiempo = $reg[3];
