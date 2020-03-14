@@ -1,9 +1,11 @@
 <?php
 require_once "prueba.php";
 //1.contectarse al servidor mysql
-		$conexion = mysqli_connect("localhost", "root","","infiltrometro") or die("ERROR nose: ".mysqli_error());
+require 'conexion2.php';
+
+		$conexion = mysqli_connect($server, $username, $password, $database) or die("ERROR : ".mysqli_error());
 		mysqli_select_db($conexion,"infiltrometro") or die("Error conectandose a la BD ");
-        
+
         class Data{
             private $con;
             public function __construct(){
