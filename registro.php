@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <title> Infiltrometro</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+<?php require 'vista/navregistro.php' ?>
 
   <!--Animacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -17,26 +6,21 @@
 
   <!-- API scanner QR -->
   <link rel="stylesheet" href="https://schmich.github.io/instascan/style.css">
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
   <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
   <!-- Link iconos -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
-  <link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
+  <link rel="stylesheet" type="text/css" href="vista/css/registro.css">
 
 </head>
 
 <body>
-  <<div class="jumbotron text-center">
+
+  <div class="container text-center" id="containerone">
   <img class="animated bounceInLeft delay-20s" src="img/user.png">
-<h1>Registro</h1>
-</div>
-
-  <div class="container text-center">
-    <!-- <img class="animated bounceInLeft delay-20s" src="img/user.png"> -->
-
+  <h1>Registro</h1>
     <form action="controller/registroUser.php" method="post" class="form-group">
       <div class="row">
         <div class="col-sm-6">
