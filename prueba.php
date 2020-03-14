@@ -11,6 +11,8 @@ if (!isset($_GET['Id'])) {
 require 'vista/nav.php';
 require 'controller/conexion2.php';
 ?>
+<div class="container-fluid">
+
 <div id="cabecera">
 <div class="row">
 
@@ -245,6 +247,7 @@ echo '<h6 id="dots">'.
     </div>
     </div>
            
+    </div>
     
   </div>
    <footer class="page-footer font-small unique-color-dark pt-4">

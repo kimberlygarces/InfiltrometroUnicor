@@ -5,7 +5,8 @@ require 'controller/conexion2.php';
 <link rel="stylesheet" type="text/css" href="vista/css/pruebaencurso.css">
 
 <!-- CODIGO DE LA PRUEBA EN CURSO -->
-<div id="cabecera">
+<div class="container-fluid">
+<div id="cabecera" >
 <div class="row">
 <div  class="col-sm-3">
 <?php
@@ -210,7 +211,7 @@ $resultado = $conn->query($sql);
   </div>
       </div>
   </div>
-  
+  </div>
       </div>
   <footer class="page-footer font-small unique-color-dark pt-4">
 

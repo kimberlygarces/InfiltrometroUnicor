@@ -7,8 +7,6 @@ $user=$_SESSION['usuario'];
 if (!isset($_SESSION['usuario'])) {
     header("location:index.php");
 }
-
-
 ?>
 <?php require 'vista/nav.php' ?>
 
@@ -19,7 +17,7 @@ if (!isset($_SESSION['usuario'])) {
 </style>
 
 
-<div class="inicio">
+<div class="inicio container-fluid">
       <div class="row">
        <div class="col-sm-5 .bg-white">
        <div class="animated bounceInLeft delay-20s col-lg-10 col-sm-10 .bg-white">
