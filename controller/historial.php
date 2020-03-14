@@ -1,8 +1,6 @@
 <?php
 //1.contectarse al servidor mysql
-		$conexion = mysqli_connect("localhost", "root", "") or die("ERROR: ".mysqli_error());
-		mysqli_select_db($conexion,"infiltrometro") or die("Error conectandose a la BD ");
-		//2.prepara una consulta sql
+		require 'conexion2.php';
 
 		require_once "../model/data.php";
             $d = new data();
