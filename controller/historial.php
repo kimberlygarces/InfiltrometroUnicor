@@ -10,7 +10,7 @@
 		$sql = "INSERT INTO historialdatos values (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."',default, default)";
 	
 		//3.ejecutar la consulta
-		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
+		$conn->query($sql);
 		header("Location: ../inicio.php");
 		}
 
