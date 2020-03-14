@@ -18,7 +18,7 @@
 
 <body>
 
-  <div class="container text-center" id="containerone">
+  <div class="container-fluid text-center" id="containerone">
   <img class="animated bounceInLeft delay-20s" src="img/user.png">
   <h1>Registro</h1>
     <form action="controller/registroUser.php" method="post" class="form-group">
