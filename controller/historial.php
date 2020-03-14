@@ -7,8 +7,8 @@
 			$prueba = $d->getPrueba();
 	
 		foreach($prueba as $p){
-		$sql = "INSERT INTO historialdatos values (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."',default, default)";
-	
+		// $sql = "INSERT INTO historialdatos values (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."',default, default)";
+		$sql = "INSERT INTO `historialdatos`(`Id`, `N_Dato`, `Id_Prueba`, `tiempo`, `distancia`, `suelo`, `localizacion`) VALUES (default,'".$p->N_Dato."','".$p->Id_Prueba."','".$p->tiempo."','".$p->distancia."',default, default)";	
 		//3.ejecutar la consulta
 		$conn->query($sql);
 		header("Location: ../inicio.php");
