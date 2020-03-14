@@ -1,6 +1,7 @@
  <style>
 
    </style>
+<link rel="shortcut icon" href="img/user.png" />
 <link rel="stylesheet" type="text/css" href="vista/css/index.css">
 <body>
 <?php require 'vista/navptal.php' ?>

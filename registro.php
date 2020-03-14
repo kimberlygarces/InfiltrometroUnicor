@@ -11,6 +11,7 @@
   <!-- Link iconos -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+  <link rel="shortcut icon" href="img/user.png" />
 
   <link rel="stylesheet" type="text/css" href="vista/css/registro.css">
 

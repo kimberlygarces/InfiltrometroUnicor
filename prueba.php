@@ -1,6 +1,7 @@
 
 <!-- <link rel="stylesheet" type="text/css" href="vista/css/historial.css"> -->
 <link rel="stylesheet" type="text/css" href="vista/css/prueba.css">
+<link rel="shortcut icon" href="img/user.png" />
 
 <?php
 $idprueba=$_GET['Id'];

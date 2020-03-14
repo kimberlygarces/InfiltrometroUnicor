@@ -3,6 +3,7 @@ require 'controller/conexion2.php';
 ?>
 
 <link rel="stylesheet" type="text/css" href="vista/css/pruebaencurso.css">
+<link rel="shortcut icon" href="img/user.png" />
 
 <!-- CODIGO DE LA PRUEBA EN CURSO -->
 <div class="container-fluid">

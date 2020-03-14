@@ -3,6 +3,7 @@ require 'controller/conexion2.php';
 
 ?>
       <link rel="stylesheet" type="text/css" href="vista/css/historial.css">
+      <link rel="shortcut icon" href="img/user.png" />
 
       <div class="titulo">
           <h1>Historial de pruebas</h1>
