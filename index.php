@@ -4,6 +4,7 @@
 <body>
 <?php require 'vista/navptal.php' ?>
 <!-- ::::::::::::::::::::::::::::::::::::CAROUSEL ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
@@ -131,6 +132,7 @@
   <!-- ::::::::::::::::::::::::::::::Container - contenido informativo ::::::::::::::::::::::::::::::::::::::::::::::::::-->
 
   
+  <div class="container-fluid">
 
   <div class="container marketing">
 
@@ -139,9 +141,10 @@
     <div class="row">
       <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/infiltrometro.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
+      <br>
        
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <h2>Obtimización</h2>
+        <p> Captura de datos en tiempo real  </p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
       </div>
       
@@ -149,16 +152,16 @@
       <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/cultivo2.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
        
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        <h2>Eficacia</h2>
+        <p>Reducir el margen de error y optimazar los datos obtenidos durante</p>
         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
       </div>
 
       <div class="col-lg-4">
       <img class="bd-placeholder-img rounded-circle" src="img/infiltrometro2.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
        
-       <h2>Heading</h2>
-       <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+       <h2>Presición</h2>
+       <p>Los datos obtenidos son más presisos, teniendo en cuenta que Inficor captura datos del proceso cada 10 segundos.</p>
        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
      </div>
            </div><!-- /.col-lg-4 -->
@@ -171,11 +174,12 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">Toma de datos durante el proceso de infiltración. <span class="text-muted">Inficor.</span></h2>
+        <p class="lead">Con el dispositivo electronico Inficor, se garantiza la captura de datos sistematizada durante el proseso de infiltración del agua en el suelo, 
+        logrando visualizar los datos desde este sitio web </p>
       </div>
       <div class="col-md-5">
-      <img src="img/cultivo.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+      <img src="img/infiltraci.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
       </div>
     </div>
 
@@ -183,11 +187,12 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">Toma de datos durante el proceso de infiltración.  <span class="text-muted">Forma tradicional.</span></h2>
+        <p class="lead">Este proceso suele ser algo tedioso en la que el agronomo se ve obligado a pasar muchas horas 
+        bajo las inclemencias del clima, tomando los datos en intervalos del tiempo cortos, además se pueden presentar errores el momento de analizar los resultados</p>
       </div>
       <div class="col-md-5 order-md-1">
-      <img src="img/cultivo.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
+      <img src="img/tomadedatos.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
       
       </div>
     </div>
@@ -196,8 +201,8 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">Beneficos de usar el dispositivo. <span class="text-muted">Inficor.</span></h2>
+        <p class="lead">Inficor es un dispositivo en prototipo que que beneficia a los usuarios encargados de realizar la prueba de infiltración, ayudando al mometo de tomar los datos, además permite la vizualización correcta de los datos</p>
       </div>
       <div class="col-md-5">
       <img src="img/cultivo.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
@@ -238,6 +243,6 @@
 <!-- Footer -->
 
 
-
+</div>
 </body>
 </html>
