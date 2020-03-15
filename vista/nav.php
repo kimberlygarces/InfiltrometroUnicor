@@ -15,6 +15,8 @@
   <!-- animacion  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
+  <link rel="shortcut icon" href="img/user.png" />
+
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 

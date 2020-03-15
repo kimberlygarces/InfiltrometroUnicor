@@ -11,7 +11,6 @@ if (!isset($_SESSION['usuario'])) {
 <?php require 'vista/nav.php' ?>
 
 <link rel="stylesheet" type="text/css" href="vista/css/inicio.css">
-<link rel="shortcut icon" href="img/user.png" />
 
 <style>
 

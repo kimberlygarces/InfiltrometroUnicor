@@ -14,6 +14,17 @@
   <!-- animacion  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
+
+  <!-- API scanner QR -->
+  <link rel="stylesheet" href="https://schmich.github.io/instascan/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <!-- Link iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="vista/css/registro.css">
+
+  <link rel="shortcut icon" href="img/user.png" />
+
   <style>
 body {font-family: Arial, Helvetica, sans-serif;
   width: auto;
