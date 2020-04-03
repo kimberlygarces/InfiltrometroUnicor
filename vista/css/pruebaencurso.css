@@ -12,11 +12,9 @@ background-color: blue;
   padding: 12px;
   color: white;
   border-radius: 3px;
-  width: 430px;
   box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
-  padding-left: 5%;
+  padding-left: 4%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 
   }
 
@@ -34,8 +32,7 @@ background-color: blue;
   
   #adi{
     background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
-    padding: 35px;
-    width: 430px;
+    padding: 2%;
     text-align: center;
     box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
   }
@@ -43,7 +40,6 @@ background-color: blue;
   #prueba{
     border: none;
     cursor: pointer;
-    width:650px;
     outline: none;
     margin-left: 29px;
     margin-bottom: 1px;
@@ -55,7 +51,7 @@ background-color: blue;
   .table2{
     cursor: pointer;
     overflow:scroll;
-    height:380px;
+    height:400px;
   }
 
   .table-responsive{
@@ -69,7 +65,11 @@ background-color: blue;
   background-color: rgba(163, 154, 212, 0.705);
 
 }
-
+.input-group{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
 
   #more {display: none;}
@@ -91,8 +91,6 @@ background-color: blue;
       font-family:  Arial, Helvetica, sans-serif;
       font-size: 20px;
       font-weight:900;
-
-
     }
   
     button:hover {

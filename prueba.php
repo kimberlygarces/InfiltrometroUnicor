@@ -16,9 +16,9 @@ require 'controller/conexion2.php';
 <div id="cabecera">
 <div class="row">
 
-<div  class="col-sm-3">
+<div  class="col-lg-3 col-sm-12">
 <?php
-echo '<h6 id="dots">'.
+echo '<h6 id="pru">'.
             "<img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
             $idprueba.
             '</h6>'
@@ -26,13 +26,13 @@ echo '<h6 id="dots">'.
 
 </div>
 <!-- ::::::::::::::::::TITULO::::::::::::::::::::::: -->
-<div  class="col-sm-9">
+<div  class="col-lg-9 col-sm-12">
 <h2>Informe general</h2> 
 </div>
 </div>
 </div>
 <div class="row"> 
- <div  class="col-sm-3" id="adi">
+ <div  class="col-lg-3 col-sm-3 " id="adi">
 <!-- VER DATOS ADICIONALES DE LA PRUEBA -->
     <div>
 
@@ -67,25 +67,30 @@ echo '<h6 id="dots">'.
            echo "<input type='hidden' name='Id' value='$idprueba' >";
             // seleccion de los la localización ya registradas
           echo "<div class='row'>";
-          echo "<div  class='col-sm-10'>";
+          echo "<div  class='col-lg-10'>";
       
-          echo "<div class='form-group'>";
+          echo "<div class='input-group mb-3'>";
+          echo "<div class='input-group-prepend'>";
+          echo "<label class='input-group-text' for='inputGroupSelect01'>";       
+          echo "<i class='fa fa-map-marker' aria-hidden='true'></i>";
+          echo "</label>";
+          echo "</div>";
            echo "<select class='form-control' id='exampleFormControlSelect1' name='Ciudad' >";
            echo "<option value='0' selected>" ."Elija una Ciudad". "</option>";
 
          
-        $sql = "SELECT * FROM localizacion " ;
-        $resultado = $conn->query($sql);
-        if(empty($resultado)){
-        }
-        else{
-          $i=0;
-        while($registro = mysqli_fetch_array($resultado)){
-          
-           echo '<option value="'.$registro['ciudad'].'">'.$registro['ciudad'].'</option>';
-        }
-      }
-    
+                $sql = "SELECT * FROM localizacion " ;
+                $resultado = $conn->query($sql);
+                if(empty($resultado)){
+                }
+                else{
+                  $i=0;
+                while($registro = mysqli_fetch_array($resultado)){
+                  
+                  echo '<option value="'.$registro['ciudad'].'">'.$registro['ciudad'].'</option>';
+                }
+              }
+            
         echo "</select>";
           echo "</div>";
           echo "</div>";
@@ -98,27 +103,35 @@ echo '<h6 id="dots">'.
 
           // ingresar el tipo de suelo de la prueba 
           echo "<div class='row'>";
-          echo "<div  class='col-sm-10'>";
-          echo "<div class='form-group'>";
+          echo "<div  class='col-lg-10' id='suelo'>";
+        
+          echo "<div class='input-group mb-3'>";
+          echo "<div class='input-group-prepend'>";
+          echo "<label class='input-group-text' for='inputGroupSelect01'>";       
+          echo "<i class='fa fa-pagelines' aria-hidden='true'></i>";
+          echo "</label>";
+          echo "</div>";
+
           echo "<select class='form-control' id='exampleFormControlSelect1' name='TipoSuelo' >";
           echo "<option value='0' selected>" ."Elija el tipo de suelo". "</option>";
 
         
-          $sql = "SELECT * FROM suelo" ;
-          $resultado = $conn->query($sql);
-          if(empty($resultado)){
+              $sql = "SELECT * FROM suelo" ;
+              $resultado = $conn->query($sql);
+              if(empty($resultado)){
+              }
+              else{
+                $i=0;
+              while($registro = mysqli_fetch_array($resultado)){
+                
+                echo '<option value="'.$registro['TipoSuelo'].'">'.$registro['TipoSuelo'].'</option>';
           }
-          else{
-            $i=0;
-          while($registro = mysqli_fetch_array($resultado)){
-            
-             echo '<option value="'.$registro['TipoSuelo'].'">'.$registro['TipoSuelo'].'</option>';
-       }
      }
    
        echo "</select>";
          echo "</div>";
          echo "</div>";
+
          echo "<div  class='col-sm-1'>";
          echo "<a  data-toggle='tooltip' title='Ingresa un nuevo tipo de suelo' href=suelo.php>"."
          <i class='fa fa-plus-circle fa-2x' aria-hidden='true'></i>"."</a>";
@@ -132,22 +145,15 @@ echo '<h6 id="dots">'.
        echo"</div>";  
 
        // BOTON DE GUARDAR DATOS DE LA PRUEBA
-       echo "<div class='btnregistro'>";
+
        echo "<div class='row'>";
        echo "<div  class='col-sm-10'>";
-       echo "<button  class='btn btn-primary'  id='myBtn2'>
+       echo "<button  class='btn btn-primary'  id='btnregistro'>
             <i class='fa fa-database' aria-hidden='true'></i>
             Registrar datos </button>";  
        echo"</div>"; 
-
-      // INGRESAR LOCALIZACIÓN Y SUELO A LA BD GENERAL
-
-       echo "<div  class='col-sm-2'>";
-        // echo "<i data-toggle='tooltip' title='Ingresa una nueva localidad o tipo de suelo' class='fa fa-map-marker fa-3x' aria-hidden='true'></i>";
        echo"</div>";  
-              echo"</div>";  
-              echo"</div>";  
-
+       
                echo "</from>";
 
         }
@@ -155,7 +161,6 @@ echo '<h6 id="dots">'.
           ?>
  
 
-    </div>
     <br>
     <!-- BOTONES PARA DESCARGAR PDF, ECXEL Y GRAFICA -->
     <div class="botonesdoc">
@@ -173,6 +178,8 @@ echo '<h6 id="dots">'.
       </button></a>
       </div>
       </div>
+      </div>
+
     <div class="col-sm-9">
     <div class="col-sm-11">
     <div class="input-group mb-3">
