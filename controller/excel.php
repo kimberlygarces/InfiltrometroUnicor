@@ -44,15 +44,15 @@ require_once('conexion2.php');
         <td> <?php echo $row['distancia'] ?> </td>
         <td> <?php echo "-" ?> </td>
         <td> <?php if ($aux == null) {
-                        echo '<td>-</td>';
+                        echo '-';
                     } else {
-                        echo '<td>' . (($row['distancia'] - $aux) * 10) . '</td>';
+                        echo (($row['distancia'] - $aux) * 10);
                     } ?> </td>
         <td> <?php if ($aux == null) {
-                        echo '<td>-</td>';
+                        echo '-';
                     } else {
                         $ia = $ia + ($row['distancia'] - $aux);
-                        echo '<td>' . ($ia * 10) . '</td>';
+                        echo ($ia * 10);
                     }
                     $aux = $row['distancia']; ?> </td>
         <td></td>
