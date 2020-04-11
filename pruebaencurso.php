@@ -21,7 +21,7 @@ require 'controller/conexion2.php';
 
               while($registro = mysqli_fetch_array($resultado)){
                   echo '<h6 id="dots">' .
-                  "  <img src='img/prueba.png' width='30' height='30' class='animated tada delay-20s'/>  ".
+                  "  <img src='img/prueba.png' width='40' height='40' class='animated tada delay-20s'/>  ".
                     $registro["Id_Prueba"].
                   '</h6>';
                   $idprueba=$registro["Id_Prueba"];
@@ -52,14 +52,21 @@ require 'controller/conexion2.php';
 
   <form action="controller/pruebatotal.php" method="post" class="form-group">
       <!-- <div id="more"> -->
+                     
         <div class="row">
         <div  class="col-sm-10">
 
       <input type="hidden" name="Id" value="<?php echo $idprueba ?>" >
 
         <div class="form-group">
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">           
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </label>
+          </div>
             <select class="form-control" id="exampleFormControlSelect1" name="Ciudad" >
-            <option value="0" selected>Elija una Ciudad</option>
+            <option value="0" selected>Ciudad</option>
 
           <?php
          $sql = "SELECT * FROM localizacion " ;
@@ -76,21 +83,29 @@ require 'controller/conexion2.php';
        ?>
           </select>
             
+               </div>
           </div>
       </div>
       <div  class="col-sm-2">
       <a class="" href=localizacion.php>
       <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
-
       </div>
-
         </div>
-      
+
         <div class="row">
         <div  class="col-sm-10">
+
+      <input type="hidden" name="Id" value="<?php echo $idprueba ?>" >
+
         <div class="form-group">
-            <select class="form-control" id="exampleFormControlSelect1" name="TipoSuelo" >
-            <option value="0" selected>Elija un tipo de suelo</option>
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">           
+        <i class="fa fa-pagelines" aria-hidden="true"></i>
+          </label>
+          </div>
+          <select class="form-control" id="exampleFormControlSelect1" name="TipoSuelo" >
+            <option value="0" selected>Tipo de suelo</option>
 
           <?php
          $sql = "SELECT * FROM suelo" ;
@@ -106,7 +121,8 @@ require 'controller/conexion2.php';
        }
        ?>
           </select>
-        </div>
+             </div>
+          </div>
       </div>
       <div  class="col-sm-2">
       <a class="" href=suelo.php>
@@ -114,6 +130,7 @@ require 'controller/conexion2.php';
 
       </div>
         </div>
+      
           <div class="form-group">
           <textarea class="form-control" name="Observaciones" id="exampleFormControlTextarea1" rows="3" placeholder="Observaciones generales de la prueba en curso"></textarea>
         </div>
@@ -122,11 +139,12 @@ require 'controller/conexion2.php';
 
                 <button  class="btn btn-primary"  id="myBtn2">
                 <i class="fa fa-database" aria-hidden="true"></i>
-                Registrar caracterización</button>  
+                Registrar Detalle</button>  
                 <br>
 
       </from>
-         <br>         
+         <br>    
+      
       <button onclick="location='controller/historial.php'" type="button" class="btn btn-danger">
         Finalizar Prueba
         </button>

@@ -28,7 +28,7 @@
           <br>
           <input type="password" name="Contrasena" class="form-control" placeholder="Contraseña" required>
           <br>
-          <input type="password" name="cPassword" class="form-control" placeholder="Verifique Contraseña" required>
+          <input type="password" name="RContrasena" class="form-control" placeholder="Verifique Contraseña" required>
           <br>
           <div class="form-group row">
             <div class="col-sm-9">
