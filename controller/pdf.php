@@ -121,7 +121,7 @@ $result = $conn->query('SELECT * FROM (dispositivo, localizacion, suelo, usuario
             </thead>
             <tbody>
                 <?php
-                $result = $conn->query('SELECT * FROM historialDatos WHERE Id_Prueba = "' . $nombrePrueba . '"');
+                $result = $conn->query('SELECT * FROM historialdatos WHERE Id_Prueba = "' . $nombrePrueba . '"');
                 $aux = null;
                 $ia = 0;
                 $intercaladoCelda = FALSE;
