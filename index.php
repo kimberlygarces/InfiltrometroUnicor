@@ -177,7 +177,8 @@
     <div class="row featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading">Toma de datos durante el proceso de infiltración. <span class="text-muted">Inficor.</span></h2>
-        <p class="lead">Con el dispositivo electronico Inficor, se garantiza la captura de datos sistematizada durante el proseso de infiltración del agua en el suelo, 
+        <p class="lead">Con el dispositivo electronico Inficor, se garantiza la captura de datos sistematizada durante 
+        el proceso de infiltración del agua en el suelo, 
         logrando visualizar los datos desde este sitio web </p>
       </div>
       <div class="col-md-5">
@@ -191,7 +192,8 @@
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Toma de datos durante el proceso de infiltración.  <span class="text-muted">Forma tradicional.</span></h2>
         <p class="lead">Este proceso suele ser algo tedioso en la que el agronomo se ve obligado a pasar muchas horas 
-        bajo las inclemencias del clima, tomando los datos en intervalos del tiempo cortos, además se pueden presentar errores el momento de analizar los resultados</p>
+        bajo las inclemencias del clima, tomando los datos en intervalos del tiempo cortos, además se pueden presentar
+         errores el momento de analizar los resultados</p>
       </div>
       <div class="col-md-5 order-md-1">
       <img src="img/tomadedatos.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
@@ -203,8 +205,11 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Beneficos de usar el dispositivo. <span class="text-muted">Inficor.</span></h2>
-        <p class="lead">Inficor es un dispositivo en prototipo que que beneficia a los usuarios encargados de realizar la prueba de infiltración, ayudando al mometo de tomar los datos, además permite la vizualización correcta de los datos</p>
+        <h2 class="featurette-heading">Beneficios de usar el dispositivo. <span class="text-muted">Inficor.</span></h2>
+        <p class="lead">Inficor es un dispositivo en prototipo que que beneficia a los usuarios encargados de realizar la
+         prueba de infiltración, ayudando a optimizar el proceso al momento de tomar los datos, permitiendo la
+          vizualización correcta de los datos en tiempo real, mantener el historial de datos de las pruebas tomadas 
+          por el dispositivo</p>
       </div>
       <div class="col-md-5">
       <img src="img/cultivo.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500">
@@ -236,7 +241,7 @@
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
+  <div class="footer-copyright text-center py-3">© 2020: Ingenieria de Sistemas
     <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
   </div>
   <!-- Copyright -->
