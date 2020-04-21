@@ -242,7 +242,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020: Ingenieria de Sistemas
-    <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+    <a href="http://104.197.33.56/infiltrometrounicor/index.php"> InfiltrometroUnicor</a>
   </div>
   <!-- Copyright -->
 
