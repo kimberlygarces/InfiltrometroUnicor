@@ -51,21 +51,17 @@ $datosY2=json_encode($valorY2, JSON_NUMERIC_CHECK);
 ?>  
 
 <div class="container">
-<?php echo  "N° Datos","$datosY" ?>
-
- <?php echo "tiempo","$datosX" ?>
- <?php echo "distancia","$datosY2" ?>
-
-
-
+    <?php // echo  "N° Datos","$datosY" ?> 
+    <?php // echo "tiempo","$datosX" ?>
+    <?php // echo "distancia","$datosY2" ?>
 
     <div class="row">
         <div class="col-sm-12">
     
             <div class="panel panel-primary">
                 <div class="panel panel-heading">
-                    Graficas
-
+                <h1>Grafica</h1>
+                <hr>
                 </div>
                 <div class="panel panel-body">
                 <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
