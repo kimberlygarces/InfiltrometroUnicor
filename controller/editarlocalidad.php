@@ -11,6 +11,6 @@
 
 		$conn->query($sql);
 
-        // header("Location: ../localizacion.php");
+        header("Location: ../localizacion.php");
 
 ?>

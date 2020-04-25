@@ -92,7 +92,6 @@ if (!isset($_SESSION['usuario'])) {
         
          }
        }
-
        echo "</tbody>";
        echo "</table>";
        echo "</div>";
