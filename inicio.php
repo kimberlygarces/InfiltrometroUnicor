@@ -26,7 +26,7 @@ if (!isset($_SESSION['usuario'])) {
         <div>
        <?php
          
-         $sql = "SELECT * FROM datosprueba where N_Dato=1" ;
+         $sql = "SELECT * FROM datosprueba where tiempo=0" ;
          $resultado = $conn->query($sql);
          if(mysqli_num_rows($resultado)>0){
 
