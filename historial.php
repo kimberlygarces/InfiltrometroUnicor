@@ -23,7 +23,7 @@ require 'controller/conexion2.php';
           <table class="table  table-striped table-hover">       
           <tbody id="myTable">
          <?php
-         $sql = "SELECT * FROM historialdatos where tiempo=1" ;
+         $sql = "SELECT * FROM historialdatos where tiempo=0" ;
          //EJECUTAR LA CONSULTA
          $resultado = $conn->query($sql);
          if(mysqli_num_rows($resultado)>0){
