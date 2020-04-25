@@ -40,7 +40,7 @@ echo '<h6 id="pru">'.
 
     // datos de la adicionales ya registrados
             $sql2 = "SELECT * FROM prueba WHERE Id = '" . $_GET["Id"] . "'";
-            //3.ejecutar la consulta
+
             $resultado2 = $conn->query($sql2) or die ("Algo ha ido mal en la consulta a la base de datos");
             $i = 0;
             if(mysqli_num_rows($resultado2)>0){
