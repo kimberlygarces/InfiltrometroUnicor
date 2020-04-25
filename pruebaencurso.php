@@ -51,10 +51,7 @@ require 'controller/conexion2.php';
   <div  class="col-sm-3" id="adi">
 
   <form action="controller/pruebatotal.php" method="post" class="form-group">
-      <!-- <div id="more"> -->
-                     
-        <div class="row">
-        <div  class="col-sm-10">
+    
 
       <input type="hidden" name="Id" value="<?php echo $idprueba ?>" >
 
@@ -82,19 +79,17 @@ require 'controller/conexion2.php';
        }
        ?>
           </select>
-            
-               </div>
-          </div>
-      </div>
-      <div  class="col-sm-2">
-      <a class="" href=localizacion.php>
-      <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
-      </div>
-        </div>
+          <div class="input-group-append">
+          <label class="input-group-text" for="inputGroupSelect01">           
+          <a  href=localizacion.php>
+          <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a></button>
+          </label>
+            </div>
+              </div>
+                </div>
+      
 
-        <div class="row">
-        <div  class="col-sm-10">
-
+      
       <input type="hidden" name="Id" value="<?php echo $idprueba ?>" >
 
         <div class="form-group">
@@ -121,14 +116,13 @@ require 'controller/conexion2.php';
        }
        ?>
           </select>
-             </div>
-          </div>
-      </div>
-      <div  class="col-sm-2">
-      <a class="" href=suelo.php>
-      <i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i></a>
-
-      </div>
+          <div class="input-group-append">
+          <label class="input-group-text" for="inputGroupSelect01">           
+          <a  href=suelo.php>
+          <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a></button>
+          </label>
+        </div>
+             </div>      
         </div>
       
           <div class="form-group">
@@ -233,8 +227,8 @@ $resultado = $conn->query($sql);
       </div>
   <footer class="page-footer font-small unique-color-dark pt-4">
 
-          <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-            <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
+          <div class="footer-copyright text-center py-3">© 2020: Ingenieria de Sistemas
+            <a href="http://104.197.33.56/infiltrometrounicor/"> InfiltrometroUnicor</a>
           </div>
 
         </footer>

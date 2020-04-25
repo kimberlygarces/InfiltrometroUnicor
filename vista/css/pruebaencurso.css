@@ -30,8 +30,9 @@ background-color: blue;
 
   
   #adi{
-    background:linear-gradient(30deg, #9493d3, rgb(242, 243, 248) ,rgb(233, 234, 247), rgb(178, 177, 226));
+    background-color: rgba(177, 177, 211, 0.664);
     padding: 2%;
+    margin-top: 1%;
     text-align: center;
     box-shadow: 10px 4px 14px 0px rgba(0,0,0,0.75);
   }
@@ -93,21 +94,20 @@ background-color: blue;
     }
   
     button:hover {
-      /* padding: 14px 16px; */
       cursor: pointer;
       outline: none;
       color: #fff;
       border: none;
-      box-shadow: 0 1px rgb(155, 157, 219);
     }
       
   #myBtn, #myBtn2{
-    background:linear-gradient(30deg, #918feb, rgb(158, 168, 216) ,rgb(187, 190, 223), rgb(253, 255, 255));
-    color: black;
+      background-color: #9493d3;
+      color: black;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      box-shadow: 0 1px rgb(155, 157, 219);
   
   }
 
-  body{
-    background:linear-gradient(30deg, #dad9e6, rgb(226, 227, 238) , rgba(188, 195, 231, 0.733), rgb(155, 154, 224));
   
-  }
