@@ -66,7 +66,8 @@ if (!isset($_SESSION['usuario'])) {
                echo "<div class='table2' >";
                echo "<table class='table  table-striped table-hover'>";     
                echo "<tbody id='myTable'>";
-         $sql = "SELECT * FROM historialdatos where N_Dato=1" ;
+               
+         $sql = "SELECT * FROM historialdatos where tiempo=0" ;
          //EJECUTAR LA CONSULTA
          $resultado = $conn->query($sql);
          if(mysqli_num_rows($resultado)>0){
