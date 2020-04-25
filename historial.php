@@ -64,9 +64,8 @@ require 'controller/conexion2.php';
           <diV>
         <footer class="page-footer font-small unique-color-dark pt-4">
 
-          <div class="footer-copyright text-center py-3">© 2019: Ingenieria de Sistemas
-            <a href="https://mdbootstrap.com/education/bootstrap/"> InfiltrometroUnicor</a>
-          </div>
+          <div class="footer-copyright text-center py-3">© 2020: Ingenieria de Sistemas
+          <a href="http://104.197.33.56/infiltrometrounicor/"> InfiltrometroUnicor</a>          </div>
           <!-- Copyright -->
 
         </footer>
