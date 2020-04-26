@@ -231,12 +231,12 @@ echo '<h6 id="pru">'.
               if ($aux == null) {
                 echo '<td>-</td>';
               } else {
-                echo '<td data-toggle="tooltip" title="Infiltración parcial">' . (($registro['distancia'] - $aux) * 10) . '</td>';
+                echo '<td data-toggle="tooltip" title="Infiltración parcial">' . (($aux - $registro['distancia']) * 10) . '</td>';
               }
               if ($aux == null) {
                 echo '<td>-</td>';
               } else {
-                $ia = $ia + ($registro['distancia'] - $aux);
+                $ia = $ia + ($aux - $registro['distancia']);
                 echo '<td data-toggle="tooltip" title="Infiltración acumulada">' . ($ia * 10) . '</td>';
               }
               $aux = $registro['distancia'];

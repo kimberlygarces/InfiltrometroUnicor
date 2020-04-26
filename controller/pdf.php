@@ -139,12 +139,12 @@ $result = $conn->query('SELECT * FROM (dispositivo, localizacion, suelo, usuario
                     if ($aux == null) {
                         echo '<td>-</td>';
                     } else {
-                        echo '<td>' . (($row['distancia'] - $aux) * 10) . '</td>';
+                        echo '<td>' . (($aux - $row['distancia']) * 10) . '</td>';
                     }
                     if ($aux == null) {
                         echo '<td>-</td>';
                     } else {
-                        $ia = $ia + ($row['distancia'] - $aux);
+                        $ia = $ia + ($aux - $row['distancia']);
                         echo '<td>' . ($ia * 10) . '</td>';
                     }
                     $aux = $row['distancia'];

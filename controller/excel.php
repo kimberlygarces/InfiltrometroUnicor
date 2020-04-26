@@ -46,12 +46,12 @@ require_once('conexion2.php');
         <td> <?php if ($aux == null) {
                         echo '-';
                     } else {
-                        echo (($row['distancia'] - $aux) * 10);
+                        echo (($aux - $row['distancia']) * 10);
                     } ?> </td>
         <td> <?php if ($aux == null) {
                         echo '-';
                     } else {
-                        $ia = $ia + ($row['distancia'] - $aux);
+                        $ia = $ia + ($aux - $row['distancia']);
                         echo ($ia * 10);
                     }
                     $aux = $row['distancia']; ?> </td>
