@@ -140,31 +140,28 @@
     <br>
     <div class="row">
       <div class="col-lg-4">
-      <img class="bd-placeholder-img rounded-circle" src="img/infiltrometro.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
+      <img class="bd-placeholder-img rounded-circle" src="img/INFICOR.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
       <br>
        
         <h2>Optimización</h2>
         <p>Buscamos la mejor manera de obtener los datos sistematicamente durante el proceso de infiltración 
         del agua en el suelo, realizando el proceso de forma eficiente y confiable.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
       </div>  
       
       <!-- /.col-lg-4 -->
       <div class="col-lg-4">
-      <img class="bd-placeholder-img rounded-circle" src="img/cultivo2.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
+      <img class="bd-placeholder-img rounded-circle" src="img/PRUEBA.jpeg" width="140" height="140" title="Infiltrometro" focusable="false">
        
         <h2>Integridad</h2>
         <p>La datos optenidos durante la prueba se mantienen integros durante todo el proceso, asegurando la 
         visialización de datos en tiempo real y al finalizar la prueba, generando informes y graficas según sea requerido </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
       </div>
 
       <div class="col-lg-4">
-      <img class="bd-placeholder-img rounded-circle" src="img/infiltrometro2.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
+      <img class="bd-placeholder-img rounded-circle" src="img/muestra1.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
        
        <h2>Presición</h2>
        <p>Los datos obtenidos son más presisos, teniendo en cuenta que Inficor captura datos del proceso cada 10 segundos.</p>
-       <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p> 
      </div>
            </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
