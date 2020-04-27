@@ -67,7 +67,7 @@ echo '<h6 id="pru">'.
            echo "<input type='hidden' name='Id' value='$idprueba' >";
             // seleccion de los la localización ya registradas
           echo "<div class='row'>";
-          echo "<div  class='col-lg-10'>";
+          echo "<div  class='col-lg-12'>";
       
           echo "<div class='input-group mb-3'>";
           echo "<div class='input-group-prepend'>";
@@ -92,18 +92,21 @@ echo '<h6 id="pru">'.
               }
             
         echo "</select>";
-          echo "</div>";
-          echo "</div>";
-          echo "<div  class='col-sm-1'>";
-          echo "<a data-toggle='tooltip' title='Ingresa una nueva localidad' href=localizacion.php>"."
-      <i class='fa fa-plus-circle fa-2x' aria-hidden='true'></i>"."</a>";
+        echo "<div class='input-group-prepend'>";
+        echo "<label class='input-group-text' for='inputGroupSelect01'>";       
+        echo "<a data-toggle='tooltip' title='Ingresa una nueva localidad' href=localizacion.php>"."
+        <i class='fa fa-plus-circle' aria-hidden='true'></i>"."</a>";
+        echo "</label>";
+        echo "</div>";
 
           echo "</div>";
+          echo "</div>";
+          
           echo "</div>";
 
           // ingresar el tipo de suelo de la prueba 
           echo "<div class='row'>";
-          echo "<div  class='col-lg-10' id='suelo'>";
+          echo "<div  class='col-lg-12' id='suelo'>";
         
           echo "<div class='input-group mb-3'>";
           echo "<div class='input-group-prepend'>";
@@ -129,13 +132,16 @@ echo '<h6 id="pru">'.
      }
    
        echo "</select>";
+       echo "<div class='input-group-prepend'>";
+       echo "<label class='input-group-text' for='inputGroupSelect01'>";       
+       echo "<a  data-toggle='tooltip' title='Ingresa un nuevo tipo de suelo' href=suelo.php>"."
+       <i class='fa fa-plus-circle' aria-hidden='true'></i>"."</a>";
+       echo "</label>";
+       echo "</div>";
          echo "</div>";
          echo "</div>";
 
-         echo "<div  class='col-sm-1'>";
-         echo "<a  data-toggle='tooltip' title='Ingresa un nuevo tipo de suelo' href=suelo.php>"."
-         <i class='fa fa-plus-circle fa-2x' aria-hidden='true'></i>"."</a>";
-            echo "</div>";
+        
          echo "</div>";
 
         //  INGRESAR LAS OBSERVACIONES DE LA PRUEBA
@@ -148,7 +154,7 @@ echo '<h6 id="pru">'.
 
        echo "<div class='row'>";
        echo "<div  class='col-sm-10'>";
-       echo "<button  class='btn btn-primary'  id='btnregistro'>
+       echo "<button  class='btn btn-ligh'  id='btnregistro'>
             <i class='fa fa-database' aria-hidden='true'></i>
             Registrar datos </button>";  
        echo"</div>"; 
