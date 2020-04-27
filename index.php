@@ -140,7 +140,7 @@
     <br>
     <div class="row">
       <div class="col-lg-4">
-      <img class="bd-placeholder-img rounded-circle" src="img/INFICOR.jpg" width="140" height="140" title="Infiltrometro" focusable="false">
+      <img class="bd-placeholder-img rounded-circle" src="img/INFICOR.JPG" width="140" height="140" title="Infiltrometro" focusable="false">
       <br>
        
         <h2>Optimización</h2>
